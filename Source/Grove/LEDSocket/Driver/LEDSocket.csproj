@@ -3,15 +3,15 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <OutputType>Library</OutputType>
-    <AssemblyName>Button</AssemblyName>
+    <AssemblyName>LEDSocket</AssemblyName>
 	<Company>Wilderness Labs, Inc</Company>
 	<PackageProjectUrl>http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/</PackageProjectUrl>
-	<PackageId>Meadow.Foundation.Grove.Sensors.Buttons.Touch</PackageId>
+	<PackageId>Meadow.Foundation.Grove.Leds</PackageId>
 	<RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation</RepositoryUrl>
-	<PackageTags>Meadow.Foundation, Grove, Button, PushButton, Touch</PackageTags>
+	<PackageTags>Meadow.Foundation, Grove, led</PackageTags>
 	<Version>0.1.0</Version>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<Description>Grove GPIO capacitive touch button</Description>
+	<Description>Grove GPIO led</Description>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Meadow.Foundation" Version="0.*" />
