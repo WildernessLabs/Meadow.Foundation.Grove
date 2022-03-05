@@ -5,6 +5,12 @@
     <OutputType>Exe</OutputType>
     <AssemblyName>App</AssemblyName>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Meadow.F7" Version="0.*" />
   </ItemGroup>

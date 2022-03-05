@@ -14,7 +14,10 @@
 	<Description>Grove GPIO momentary push button</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Meadow.Foundation" Version="0.*" />
-    <PackageReference Include="Meadow.Foundation.Displays.Tm1637" Version="0.1.45" />
+    <ProjectReference Include="..\..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Core\Meadow.Foundation.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\meadow.foundation\Source\Meadow.Foundation.Peripherals\Sensors.Motion.Mma7660fc\Driver\Sensors.Motion.Mma7660fc\Sensors.Motion.Mma7660fc.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Meadow.Core\source\Meadow.Core\Meadow.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Meadow.Units\Source\Meadow.Units\Meadow.Units.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Meadow.Contracts\Source\Meadow.Contracts\Meadow.Contracts.csproj" />
   </ItemGroup>
 </Project>

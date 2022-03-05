@@ -15,6 +15,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Meadow.Foundation" Version="0.*" />
-    <PackageReference Include="Meadow.Foundation.Displays.Tm1637" Version="0.1.45" />
+    <PackageReference Include="Meadow.Foundation.Sensors.Motion.Adxl3xx" Version="0.1.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Meadow.Foundation.Sensors.Motion.Adxl3xx" />
   </ItemGroup>
 </Project>

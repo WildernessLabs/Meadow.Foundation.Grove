@@ -1,13 +1,20 @@
-﻿using Meadow.Devices;
-using Meadow.Foundation.Displays;
+﻿using Meadow.Foundation.Sensors.Motion;
+using Meadow.Devices;
 using Meadow.Hardware;
 
 namespace Meadow.Foundation.Grove.Displays
 {
-    public class FourDigitDisplay : Tm1637
+    public class ThreeAxisDigitalCompass : Hmc5883
     {
-        public FourDigitDisplay(IMeadowDevice device, IPin pinClock, IPin pinData) : base(device, pinClock, pinData)
+        public ThreeAxisDigitalCompass(II2cBus i2cBus, byte address = (byte)Addresses.Default,
+            GainLevels gain = GainLevels.Gain1090,
+            MeasuringModes measuringMode = MeasuringModes.Continuous,
+            DataOutputRates outputRate = DataOutputRates.Rate15,
+            SampleAmounts samplesAmount = SampleAmounts.One,
+            MeasurementConfigurations measurementConfig = MeasurementConfigurations.Normal)
+            :base (i2cBus, address, gain, measuringMode, outputRate, samplesAmount, measurementConfig)
         {
+
         }
     }
 }

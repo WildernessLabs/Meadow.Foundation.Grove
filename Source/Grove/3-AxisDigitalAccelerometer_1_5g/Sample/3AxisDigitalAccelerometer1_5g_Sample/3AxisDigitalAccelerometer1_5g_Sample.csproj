@@ -6,6 +6,10 @@
     <AssemblyName>App</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Meadow.F7" Version="0.*" />
+    <ProjectReference Include="..\..\..\..\..\..\Meadow.Core\source\Meadow.F7\Meadow.F7.csproj" />
+    <ProjectReference Include="..\..\Driver\3AxisDigitalAccelerometer1_5g.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Meadow.Units\Source\Meadow.Units\Meadow.Units.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Meadow.Contracts\Source\Meadow.Contracts\Meadow.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Meadow.Core\source\Meadow.Core\Meadow.Core.csproj" />
   </ItemGroup>
 </Project>

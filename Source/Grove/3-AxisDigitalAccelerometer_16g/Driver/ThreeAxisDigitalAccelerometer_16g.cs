@@ -1,13 +1,15 @@
 ﻿using Meadow.Devices;
-using Meadow.Foundation.Displays;
+using Meadow.Foundation.Sensors.Motion;
 using Meadow.Hardware;
 
-namespace Meadow.Foundation.Grove.Displays
+namespace Meadow.Foundation.Grove.Sensors.Motion
 {
-    public class FourDigitDisplay : Tm1637
+    public class ThreeAxisDigitalAccelerometer16g : Adxl345
     {
-        public FourDigitDisplay(IMeadowDevice device, IPin pinClock, IPin pinData) : base(device, pinClock, pinData)
+        public ThreeAxisDigitalAccelerometer16g(II2cBus i2CBus)
+            : base (i2CBus)
         {
+
         }
     }
 }

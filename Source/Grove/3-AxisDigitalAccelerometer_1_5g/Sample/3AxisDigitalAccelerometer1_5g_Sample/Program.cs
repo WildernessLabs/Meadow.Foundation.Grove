@@ -1,7 +1,7 @@
 ﻿using Meadow;
 using System.Threading;
 
-namespace Grove.FourDigitDisplay_Sample
+namespace Grove.ThreeAxisDigitalAcceleromter1_5g_Sample
 {
     internal class Program
     {
