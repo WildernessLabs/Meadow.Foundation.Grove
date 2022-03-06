@@ -65,15 +65,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sensors.Motion.Hmc5883", ".
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sensors.Motion.Mma7660fc", "..\..\..\meadow.foundation\Source\Meadow.Foundation.Peripherals\Sensors.Motion.Mma7660fc\Driver\Sensors.Motion.Mma7660fc\Sensors.Motion.Mma7660fc.csproj", "{AAFAF07D-7DED-40BB-8501-D67D3B345CF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meadow.Foundation.Core", "..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Core\Meadow.Foundation.Core.csproj", "{D276517F-BE61-4B84-9313-C9A76C98C8EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meadow.Foundation.Core", "..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Core\Meadow.Foundation.Core.csproj", "{D276517F-BE61-4B84-9313-C9A76C98C8EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meadow.F7", "..\..\..\Meadow.Core\source\Meadow.F7\Meadow.F7.csproj", "{1777CE92-9B3A-4217-868C-7C1CF918AB97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meadow.F7", "..\..\..\Meadow.Core\source\Meadow.F7\Meadow.F7.csproj", "{1777CE92-9B3A-4217-868C-7C1CF918AB97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meadow.Core", "..\..\..\Meadow.Core\source\Meadow.Core\Meadow.Core.csproj", "{750C38EB-3410-4A74-8174-00E9D3C5EB6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meadow.Core", "..\..\..\Meadow.Core\source\Meadow.Core\Meadow.Core.csproj", "{750C38EB-3410-4A74-8174-00E9D3C5EB6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meadow.Units", "..\..\..\Meadow.Units\Source\Meadow.Units\Meadow.Units.csproj", "{21F7FD8C-E6C9-494F-851F-7BEC1059AA22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meadow.Units", "..\..\..\Meadow.Units\Source\Meadow.Units\Meadow.Units.csproj", "{21F7FD8C-E6C9-494F-851F-7BEC1059AA22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meadow.Contracts", "..\..\..\Meadow.Contracts\Source\Meadow.Contracts\Meadow.Contracts.csproj", "{8391D204-E492-4A92-9551-C0BAD4F58834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meadow.Contracts", "..\..\..\Meadow.Contracts\Source\Meadow.Contracts\Meadow.Contracts.csproj", "{8391D204-E492-4A92-9551-C0BAD4F58834}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Buzzer", "Buzzer", "{A81D96A0-835C-4817-9516-426FA06BDB79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{27671542-AE52-4AAD-B4BA-82CECE2B0407}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Buzzer", "Buzzer\Driver\Buzzer.csproj", "{586D0374-7831-474F-B99B-475D36CBC311}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Buzzer_Sample", "Buzzer\Sample\Buzzer_Sample\Buzzer_Sample.csproj", "{939CB3B0-1E0E-46E6-87DF-98A48897CEC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -197,6 +205,18 @@ Global
 		{8391D204-E492-4A92-9551-C0BAD4F58834}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8391D204-E492-4A92-9551-C0BAD4F58834}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8391D204-E492-4A92-9551-C0BAD4F58834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{586D0374-7831-474F-B99B-475D36CBC311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{586D0374-7831-474F-B99B-475D36CBC311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{586D0374-7831-474F-B99B-475D36CBC311}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{586D0374-7831-474F-B99B-475D36CBC311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{586D0374-7831-474F-B99B-475D36CBC311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{586D0374-7831-474F-B99B-475D36CBC311}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{939CB3B0-1E0E-46E6-87DF-98A48897CEC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939CB3B0-1E0E-46E6-87DF-98A48897CEC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939CB3B0-1E0E-46E6-87DF-98A48897CEC6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{939CB3B0-1E0E-46E6-87DF-98A48897CEC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939CB3B0-1E0E-46E6-87DF-98A48897CEC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{939CB3B0-1E0E-46E6-87DF-98A48897CEC6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -230,6 +250,9 @@ Global
 		{750C38EB-3410-4A74-8174-00E9D3C5EB6D} = {D1D4B655-966C-43E9-9F4D-FF728865AB65}
 		{21F7FD8C-E6C9-494F-851F-7BEC1059AA22} = {D1D4B655-966C-43E9-9F4D-FF728865AB65}
 		{8391D204-E492-4A92-9551-C0BAD4F58834} = {D1D4B655-966C-43E9-9F4D-FF728865AB65}
+		{27671542-AE52-4AAD-B4BA-82CECE2B0407} = {A81D96A0-835C-4817-9516-426FA06BDB79}
+		{586D0374-7831-474F-B99B-475D36CBC311} = {A81D96A0-835C-4817-9516-426FA06BDB79}
+		{939CB3B0-1E0E-46E6-87DF-98A48897CEC6} = {27671542-AE52-4AAD-B4BA-82CECE2B0407}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {803C75D4-CF94-4881-BC4C-7CBE9D272949}
