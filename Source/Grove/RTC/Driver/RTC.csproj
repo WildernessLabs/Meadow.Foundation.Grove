@@ -1,0 +1,20 @@
+﻿<Project Sdk="Meadow.Sdk/1.1.0">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <OutputType>Library</OutputType>
+    <AssemblyName>RTC</AssemblyName>
+	<Company>Wilderness Labs, Inc</Company>
+	<PackageProjectUrl>http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/</PackageProjectUrl>
+	<PackageId>Meadow.Foundation.Grove.RTC</PackageId>
+	<RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation</RepositoryUrl>
+	<PackageTags>Meadow.Foundation, Grove, RTC, real time clock, DS1307</PackageTags>
+	<Version>0.1.0</Version>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<Description>Grove I2C real time clock (DS1307)</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Meadow.Foundation" Version="0.*" />
+    <PackageReference Include="Meadow.Foundation.RTCs.Ds1307" Version="0.7.49" />
+  </ItemGroup>
+</Project>
