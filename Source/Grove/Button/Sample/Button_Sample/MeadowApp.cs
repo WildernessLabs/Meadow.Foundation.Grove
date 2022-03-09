@@ -12,7 +12,7 @@ namespace Grove.Button_Sample
         {
             Console.WriteLine("Initialize hardware...");
 
-            Button button = new Button(Device, Device.Pins.D13);
+            var button = new Button(Device, Device.Pins.D13);
             button.LongClickedThreshold = TimeSpan.FromMilliseconds(1500);
 
             button.Clicked += (s, e) => Console.WriteLine("Grove Button clicked");

@@ -5,8 +5,11 @@ namespace Meadow.Foundation.Grove.Sensors.Buttons
 {
     public class Button : PushButton
     {
-        public Button (IDigitalInputController device, IPin inputPin)
-            : base(device, inputPin, ResistorMode.InternalPullDown)
+        public Button(IDigitalInputPort interruptPort) : base(interruptPort)
+        {
+        }
+
+        public Button(IDigitalInputController device, IPin inputPin, ResistorMode resistorMode = ResistorMode.InternalPullUp) : base(device, inputPin, resistorMode)
         {
         }
     }
