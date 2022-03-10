@@ -151,6 +151,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TiltSwitch", "TiltSwitch\Dr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TiltSwitch_Sample", "TiltSwitch\Sample\TiltSwitch_Sample\TiltSwitch_Sample.csproj", "{9924150A-131F-4EDA-928A-6D926BA9F219}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemperatureHumiditySensor_HighAccuracyMini", "TemperatureHumiditySensor_HighAccuracyMini", "{3201AB83-CF33-432C-9770-CA8AF6835BBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{160011DA-983C-46C9-B1AA-FC9AF51C47D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemperatureHumiditySensor_HighAccuracyMini", "TemperatureHumiditySensor_HighAccuracyMini\Driver\TemperatureHumiditySensor_HighAccuracyMini.csproj", "{4B78B725-AAAF-4602-BCF1-4FADDBC7520E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemperatureHumiditySensor_HighAccuracyMini_Sample", "TemperatureHumiditySensor_HighAccuracyMini\Sample\TemperatureHumiditySensor_HighAccuracyMini_Sample\TemperatureHumiditySensor_HighAccuracyMini_Sample.csproj", "{2BE9B3D7-D00F-4E54-835A-EF79C38B8360}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sensors.Atmospheric.Th02", "..\..\..\meadow.foundation\Source\Meadow.Foundation.Peripherals\Sensors.Atmospheric.Th02\Driver\Sensors.Atmospheric.Th02\Sensors.Atmospheric.Th02.csproj", "{835156B7-BFD8-41EB-AA99-9DF284FE19E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Test", "_Test", "{72D67797-DCE1-41FA-AC67-674BA94E867C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -381,6 +393,24 @@ Global
 		{9924150A-131F-4EDA-928A-6D926BA9F219}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9924150A-131F-4EDA-928A-6D926BA9F219}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9924150A-131F-4EDA-928A-6D926BA9F219}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4B78B725-AAAF-4602-BCF1-4FADDBC7520E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B78B725-AAAF-4602-BCF1-4FADDBC7520E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B78B725-AAAF-4602-BCF1-4FADDBC7520E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4B78B725-AAAF-4602-BCF1-4FADDBC7520E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B78B725-AAAF-4602-BCF1-4FADDBC7520E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B78B725-AAAF-4602-BCF1-4FADDBC7520E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2BE9B3D7-D00F-4E54-835A-EF79C38B8360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BE9B3D7-D00F-4E54-835A-EF79C38B8360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BE9B3D7-D00F-4E54-835A-EF79C38B8360}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2BE9B3D7-D00F-4E54-835A-EF79C38B8360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BE9B3D7-D00F-4E54-835A-EF79C38B8360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BE9B3D7-D00F-4E54-835A-EF79C38B8360}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{835156B7-BFD8-41EB-AA99-9DF284FE19E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{835156B7-BFD8-41EB-AA99-9DF284FE19E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{835156B7-BFD8-41EB-AA99-9DF284FE19E8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{835156B7-BFD8-41EB-AA99-9DF284FE19E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{835156B7-BFD8-41EB-AA99-9DF284FE19E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{835156B7-BFD8-41EB-AA99-9DF284FE19E8}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -442,6 +472,10 @@ Global
 		{141617E6-FF2E-446D-A691-C4D9613EE6A8} = {80E875F2-9F94-4B17-B7A7-AC4AF08C209B}
 		{0C5FF65C-D7B2-41D2-A7F0-37D55B2F7318} = {80E875F2-9F94-4B17-B7A7-AC4AF08C209B}
 		{9924150A-131F-4EDA-928A-6D926BA9F219} = {141617E6-FF2E-446D-A691-C4D9613EE6A8}
+		{160011DA-983C-46C9-B1AA-FC9AF51C47D2} = {3201AB83-CF33-432C-9770-CA8AF6835BBF}
+		{4B78B725-AAAF-4602-BCF1-4FADDBC7520E} = {3201AB83-CF33-432C-9770-CA8AF6835BBF}
+		{2BE9B3D7-D00F-4E54-835A-EF79C38B8360} = {160011DA-983C-46C9-B1AA-FC9AF51C47D2}
+		{835156B7-BFD8-41EB-AA99-9DF284FE19E8} = {D1D4B655-966C-43E9-9F4D-FF728865AB65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {803C75D4-CF94-4881-BC4C-7CBE9D272949}
