@@ -1,7 +1,7 @@
 ﻿using Meadow;
 using System.Threading;
 
-namespace Grove.SwitchP_Sample
+namespace Grove.TiltSwitch_Sample
 {
     internal class Program
     {
