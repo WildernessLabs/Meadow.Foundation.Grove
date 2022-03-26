@@ -191,9 +191,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{85D894
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoistureSensor", "MoistureSensor\Driver\MoistureSensor.csproj", "{7F6DE089-84B2-4769-BBA1-28D1F7359985}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoistureSensor_Sample", "MoistureSensor\Sample\MoistureSensor_Sample\MoistureSensor_Sample.csproj", "{580D277A-7796-4BC4-8FCC-ECF11FEC3F19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoistureSensor_Sample", "MoistureSensor\Sample\MoistureSensor_Sample\MoistureSensor_Sample.csproj", "{580D277A-7796-4BC4-8FCC-ECF11FEC3F19}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sensors.Moisture.Capacitive", "..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Moisture.Capacitive\Driver\Sensors.Moisture.Capacitive\Sensors.Moisture.Capacitive.csproj", "{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VibrationMotor", "VibrationMotor", "{D61D8815-2459-49D5-9CFA-FAC0DDAB0A6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{D88EE102-6A9A-49E8-A5E3-35378E3773B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VibrationMotor", "VibrationMotor\Driver\VibrationMotor.csproj", "{1E88DA6B-0B7F-47A8-8E8E-EF8B78C77A82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VibrationMotor_Sample", "VibrationMotor\Sample\VibrationMotor_Sample\VibrationMotor_Sample.csproj", "{93ACA849-02C0-4CC4-9969-060561A43464}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -497,6 +505,18 @@ Global
 		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1E88DA6B-0B7F-47A8-8E8E-EF8B78C77A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E88DA6B-0B7F-47A8-8E8E-EF8B78C77A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E88DA6B-0B7F-47A8-8E8E-EF8B78C77A82}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1E88DA6B-0B7F-47A8-8E8E-EF8B78C77A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E88DA6B-0B7F-47A8-8E8E-EF8B78C77A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E88DA6B-0B7F-47A8-8E8E-EF8B78C77A82}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{93ACA849-02C0-4CC4-9969-060561A43464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93ACA849-02C0-4CC4-9969-060561A43464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93ACA849-02C0-4CC4-9969-060561A43464}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{93ACA849-02C0-4CC4-9969-060561A43464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93ACA849-02C0-4CC4-9969-060561A43464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93ACA849-02C0-4CC4-9969-060561A43464}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -575,6 +595,9 @@ Global
 		{7F6DE089-84B2-4769-BBA1-28D1F7359985} = {77B7C74F-5269-432A-B9FA-DDD72F996DB5}
 		{580D277A-7796-4BC4-8FCC-ECF11FEC3F19} = {85D89416-3BB3-4AF3-982C-9F8ACBE309C3}
 		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF} = {D1D4B655-966C-43E9-9F4D-FF728865AB65}
+		{D88EE102-6A9A-49E8-A5E3-35378E3773B4} = {D61D8815-2459-49D5-9CFA-FAC0DDAB0A6B}
+		{1E88DA6B-0B7F-47A8-8E8E-EF8B78C77A82} = {D61D8815-2459-49D5-9CFA-FAC0DDAB0A6B}
+		{93ACA849-02C0-4CC4-9969-060561A43464} = {D88EE102-6A9A-49E8-A5E3-35378E3773B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {803C75D4-CF94-4881-BC4C-7CBE9D272949}
