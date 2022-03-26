@@ -13,13 +13,13 @@ namespace Grove.LEDButton_Sample
             Console.WriteLine("Initialize hardware...");
 
             var button = new LEDButton(Device, Device.Pins.D12, Device.Pins.D13);
+
             button.LongClickedThreshold = TimeSpan.FromMilliseconds(1500);
 
             button.Clicked += (s, e) =>
             {
                 Console.WriteLine("Grove Button clicked");
                 button.IsLedOn = !button.IsLedOn;
-                
             };
 
             button.LongClicked += (s, e) =>

@@ -7,22 +7,23 @@ namespace Meadow.Foundation.Grove.Sensors.Buttons
 {
     public class LEDButton : PushButton
     {
-        PwmLed Led;
+        readonly Led led;
 
         public bool IsLedOn
         {
-            get => Led.IsOn;
-            set => Led.IsOn = value;
+            get => led.IsOn;
+            set => led.IsOn = value;
         }
 
-        public LEDButton(IDigitalInputPort buttonPort, IPwmPort ledPort) : base(buttonPort)
+        public LEDButton(IDigitalInputPort buttonPort, IDigitalOutputPort ledPort) : base(buttonPort)
         {
-            Led = new PwmLed(ledPort, 3.3f); 
+            led = new Led(ledPort); 
         }
 
-        public LEDButton(IMeadowDevice device, IPin buttonPin, IPin ledPwmPin, ResistorMode resistorMode = ResistorMode.InternalPullUp) : base(device, buttonPin, resistorMode)
+        public LEDButton(IMeadowDevice device, IPin buttonPin, IPin ledPin, ResistorMode resistorMode = ResistorMode.InternalPullUp)
+            : base(device, buttonPin, resistorMode)
         {
-            Led = new PwmLed(device.CreatePwmPort(ledPwmPin), 3.3f);
+            led = new Led(device, ledPin);
         }
     }
 }
