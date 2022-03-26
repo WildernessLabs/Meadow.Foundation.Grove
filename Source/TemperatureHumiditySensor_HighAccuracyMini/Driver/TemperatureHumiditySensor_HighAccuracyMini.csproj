@@ -17,6 +17,6 @@
     <PackageReference Include="Meadow.Foundation" Version="0.*" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\meadow.foundation\Source\Meadow.Foundation.Peripherals\Sensors.Atmospheric.Th02\Driver\Sensors.Atmospheric.Th02\Sensors.Atmospheric.Th02.csproj" />
+    <ProjectReference Include="..\..\..\..\meadow.foundation\Source\Meadow.Foundation.Peripherals\Sensors.Atmospheric.Th02\Driver\Sensors.Atmospheric.Th02.csproj" />
   </ItemGroup>
 </Project>
