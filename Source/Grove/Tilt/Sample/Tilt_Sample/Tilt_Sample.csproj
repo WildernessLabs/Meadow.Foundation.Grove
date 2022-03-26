@@ -9,6 +9,6 @@
     <PackageReference Include="Meadow.F7" Version="0.*" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Driver\TiltSwitch.csproj" />
+    <ProjectReference Include="..\..\Driver\Tilt.csproj" />
   </ItemGroup>
 </Project>

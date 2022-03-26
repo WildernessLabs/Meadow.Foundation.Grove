@@ -12,7 +12,7 @@ namespace Grove.TiltSwitch_Sample
         {
             Console.WriteLine("Initialize hardware...");
 
-            var tiltSwitch = new TiltSwitch(Device, Device.Pins.D13);
+            var tiltSwitch = new Tilt(Device, Device.Pins.D13);
 
             tiltSwitch.Changed += (s, e) =>
             {
