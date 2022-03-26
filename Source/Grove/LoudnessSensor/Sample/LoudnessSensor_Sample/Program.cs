@@ -1,7 +1,7 @@
 ﻿using Meadow;
 using System.Threading;
 
-namespace SoundSensor_Sample
+namespace LoudnessSensor_Sample
 {
     internal class Program
     {

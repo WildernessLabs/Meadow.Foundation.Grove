@@ -4,24 +4,24 @@ using Meadow.Foundation.Grove.Sensors.Sound;
 using System;
 using System.Threading.Tasks;
 
-namespace SoundSensor_Sample
+namespace LoudnessSensor_Sample
 {
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
         //<!—SNIP—>
 
-        SoundSensor sensor;
+        LoudnessSensor sensor;
 
         public MeadowApp()
         {
             Console.WriteLine("Initializing...");
 
             // configure our sensor
-            sensor = new SoundSensor(Device, Device.Pins.A01);
+            sensor = new LoudnessSensor(Device, Device.Pins.A01);
 
             // Example that uses an IObservable subscription to only be notified when the voltage changes by at least 500mV
-            var consumer = SoundSensor.CreateObserver(
+            var consumer = LoudnessSensor.CreateObserver(
                 handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),
                 // only notify if the change is greater than 0.5V
                 filter: result => 
