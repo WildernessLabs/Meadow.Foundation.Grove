@@ -161,7 +161,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemperatureHumiditySensor_H
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sensors.Atmospheric.Th02", "..\..\..\meadow.foundation\Source\Meadow.Foundation.Peripherals\Sensors.Atmospheric.Th02\Driver\Sensors.Atmospheric.Th02\Sensors.Atmospheric.Th02.csproj", "{835156B7-BFD8-41EB-AA99-9DF284FE19E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Test", "_Test", "{72D67797-DCE1-41FA-AC67-674BA94E867C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VibrationSensor", "VibrationSensor", "{B394BF1D-D25C-47B8-9412-514215BA5F48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{AE0163A6-C273-468F-B150-8990A8ABB6C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VibrationSensor", "VibrationSensor\Driver\VibrationSensor.csproj", "{1A2723F2-9663-4146-ACDE-E9AAAD0A737F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VibrationSensor_Sample", "VibrationSensor\Sample\VibrationSensor_Sample\VibrationSensor_Sample.csproj", "{07508636-D888-46DB-8D58-A7DBB6D6E595}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -411,6 +417,18 @@ Global
 		{835156B7-BFD8-41EB-AA99-9DF284FE19E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{835156B7-BFD8-41EB-AA99-9DF284FE19E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{835156B7-BFD8-41EB-AA99-9DF284FE19E8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1A2723F2-9663-4146-ACDE-E9AAAD0A737F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2723F2-9663-4146-ACDE-E9AAAD0A737F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2723F2-9663-4146-ACDE-E9AAAD0A737F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1A2723F2-9663-4146-ACDE-E9AAAD0A737F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2723F2-9663-4146-ACDE-E9AAAD0A737F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A2723F2-9663-4146-ACDE-E9AAAD0A737F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{07508636-D888-46DB-8D58-A7DBB6D6E595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07508636-D888-46DB-8D58-A7DBB6D6E595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07508636-D888-46DB-8D58-A7DBB6D6E595}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{07508636-D888-46DB-8D58-A7DBB6D6E595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07508636-D888-46DB-8D58-A7DBB6D6E595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07508636-D888-46DB-8D58-A7DBB6D6E595}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -476,6 +494,9 @@ Global
 		{4B78B725-AAAF-4602-BCF1-4FADDBC7520E} = {3201AB83-CF33-432C-9770-CA8AF6835BBF}
 		{2BE9B3D7-D00F-4E54-835A-EF79C38B8360} = {160011DA-983C-46C9-B1AA-FC9AF51C47D2}
 		{835156B7-BFD8-41EB-AA99-9DF284FE19E8} = {D1D4B655-966C-43E9-9F4D-FF728865AB65}
+		{AE0163A6-C273-468F-B150-8990A8ABB6C1} = {B394BF1D-D25C-47B8-9412-514215BA5F48}
+		{1A2723F2-9663-4146-ACDE-E9AAAD0A737F} = {B394BF1D-D25C-47B8-9412-514215BA5F48}
+		{07508636-D888-46DB-8D58-A7DBB6D6E595} = {AE0163A6-C273-468F-B150-8990A8ABB6C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {803C75D4-CF94-4881-BC4C-7CBE9D272949}
