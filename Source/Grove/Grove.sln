@@ -185,6 +185,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagneticSwitch", "MagneticS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagneticSwitch_Sample", "MagneticSwitch\Sample\MagneticSwitch_Sample\MagneticSwitch_Sample.csproj", "{2D468186-4EA3-4FDD-909E-3F4FE8B76D52}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MoistureSensor", "MoistureSensor", "{77B7C74F-5269-432A-B9FA-DDD72F996DB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{85D89416-3BB3-4AF3-982C-9F8ACBE309C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoistureSensor", "MoistureSensor\Driver\MoistureSensor.csproj", "{7F6DE089-84B2-4769-BBA1-28D1F7359985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoistureSensor_Sample", "MoistureSensor\Sample\MoistureSensor_Sample\MoistureSensor_Sample.csproj", "{580D277A-7796-4BC4-8FCC-ECF11FEC3F19}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sensors.Moisture.Capacitive", "..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Moisture.Capacitive\Driver\Sensors.Moisture.Capacitive\Sensors.Moisture.Capacitive.csproj", "{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -469,6 +479,24 @@ Global
 		{2D468186-4EA3-4FDD-909E-3F4FE8B76D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D468186-4EA3-4FDD-909E-3F4FE8B76D52}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2D468186-4EA3-4FDD-909E-3F4FE8B76D52}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7F6DE089-84B2-4769-BBA1-28D1F7359985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6DE089-84B2-4769-BBA1-28D1F7359985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6DE089-84B2-4769-BBA1-28D1F7359985}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7F6DE089-84B2-4769-BBA1-28D1F7359985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6DE089-84B2-4769-BBA1-28D1F7359985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F6DE089-84B2-4769-BBA1-28D1F7359985}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{580D277A-7796-4BC4-8FCC-ECF11FEC3F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{580D277A-7796-4BC4-8FCC-ECF11FEC3F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{580D277A-7796-4BC4-8FCC-ECF11FEC3F19}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{580D277A-7796-4BC4-8FCC-ECF11FEC3F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{580D277A-7796-4BC4-8FCC-ECF11FEC3F19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{580D277A-7796-4BC4-8FCC-ECF11FEC3F19}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -543,6 +571,10 @@ Global
 		{80681C62-C467-46C3-AC5B-C68347C8562B} = {1F81FE22-7BDD-463D-8A24-129005AD4F74}
 		{C48A33EB-6993-473D-AF5F-A5CDD8043FC5} = {1F81FE22-7BDD-463D-8A24-129005AD4F74}
 		{2D468186-4EA3-4FDD-909E-3F4FE8B76D52} = {80681C62-C467-46C3-AC5B-C68347C8562B}
+		{85D89416-3BB3-4AF3-982C-9F8ACBE309C3} = {77B7C74F-5269-432A-B9FA-DDD72F996DB5}
+		{7F6DE089-84B2-4769-BBA1-28D1F7359985} = {77B7C74F-5269-432A-B9FA-DDD72F996DB5}
+		{580D277A-7796-4BC4-8FCC-ECF11FEC3F19} = {85D89416-3BB3-4AF3-982C-9F8ACBE309C3}
+		{ADEC1D1F-458C-41B8-ADC6-E20BE24597EF} = {D1D4B655-966C-43E9-9F4D-FF728865AB65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {803C75D4-CF94-4881-BC4C-7CBE9D272949}
