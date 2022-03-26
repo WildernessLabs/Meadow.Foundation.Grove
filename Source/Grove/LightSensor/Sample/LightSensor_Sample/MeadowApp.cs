@@ -1,6 +1,6 @@
 ﻿using Meadow;
 using Meadow.Devices;
-using Meadow.Foundation.Sensors.Rotary;
+using Meadow.Foundation.Grove.Sensors.Light;
 using System;
 using System.Threading.Tasks;
 
@@ -11,17 +11,17 @@ namespace RotaryAngleSensor_Sample
     {
         //<!—SNIP—>
 
-        RotaryAngleSensor sensor;
+        LightSensor sensor;
 
         public MeadowApp()
         {
             Console.WriteLine("Initializing...");
 
             // configure our sensor
-            sensor = new RotaryAngleSensor(Device, Device.Pins.A01);
+            sensor = new LightSensor(Device, Device.Pins.A01);
 
             // Example that uses an IObservable subscription to only be notified when the voltage changes by at least 500mV
-            var consumer = RotaryAngleSensor.CreateObserver(
+            var consumer = LightSensor.CreateObserver(
                 handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),
                 // only notify if the change is greater than 0.5V
                 filter: result => 
@@ -41,12 +41,12 @@ namespace RotaryAngleSensor_Sample
             };
 
             //==== One-off reading use case/pattern
-            ReadMoisture().Wait();
+            Read().Wait();
 
             sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
         }
 
-        protected async Task ReadMoisture()
+        protected async Task Read()
         {
             var result = await sensor.Read();
             Console.WriteLine($"Initial read: {result.Millivolts:N2}mV");
