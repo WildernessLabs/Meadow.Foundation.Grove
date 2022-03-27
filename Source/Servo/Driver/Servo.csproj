@@ -1,0 +1,20 @@
+﻿<Project Sdk="Meadow.Sdk/1.1.0">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Servo</AssemblyName>
+	<Company>Wilderness Labs, Inc</Company>
+	<PackageProjectUrl>http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/</PackageProjectUrl>
+	<PackageId>Meadow.Foundation.Grove.Servos.Servo</PackageId>
+	<RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation</RepositoryUrl>
+	<PackageTags>Meadow.Foundation, Servo, Motor, SG90</PackageTags>
+	<Version>0.1.0</Version>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<Description>Grove PWM servo motor</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Meadow.Foundation" Version="0.*" />
+    <PackageReference Include="Meadow.Foundation.Servos.ServoCore" Version="0.8.43" />
+  </ItemGroup>
+</Project>
