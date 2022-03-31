@@ -44,7 +44,7 @@ namespace Meadow.Foundation.Grove.Sensors.Light
             : this(device.CreateDigitalInputPort(inputPin, InterruptMode.EdgeBoth, ResistorMode.InternalPullUp, 0, 25))
         { }
 
-        private void SignalPortChanged(object sender, DigitalPortResult e)
+        void SignalPortChanged(object sender, DigitalPortResult e)
         {
             ColorChanged?.Invoke(this, e.New.State? LineColor.Black : LineColor.White);
         }

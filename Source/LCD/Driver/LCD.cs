@@ -23,7 +23,6 @@ namespace Meadow.Foundation.Grove.Displays
                  rows,
                  columns,
                  true)
-        {
-        }
+        { }
     }
 }

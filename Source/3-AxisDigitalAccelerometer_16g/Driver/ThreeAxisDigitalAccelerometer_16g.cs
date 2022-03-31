@@ -1,5 +1,4 @@
-﻿using Meadow.Devices;
-using Meadow.Foundation.Sensors.Motion;
+﻿using Meadow.Foundation.Sensors.Motion;
 using Meadow.Hardware;
 
 namespace Meadow.Foundation.Grove.Sensors.Motion
@@ -8,8 +7,6 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
     {
         public ThreeAxisDigitalAccelerometer16g(II2cBus i2CBus)
             : base (i2CBus)
-        {
-
-        }
+        { }
     }
 }
