@@ -9,6 +9,8 @@ namespace Grove.WaterSensor_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!—SNIP—>
+
         WaterSensor waterSensor;
 
         public MeadowApp()
@@ -42,10 +44,12 @@ namespace Grove.WaterSensor_Sample
             waterSensor.StartUpdating(TimeSpan.FromSeconds(5));
         }
 
-        protected async Task ReadLevel()
+        async Task ReadLevel()
         {
             var conditions = await waterSensor.Read();
             Console.WriteLine($"Initial level: { conditions }");
         }
+
+        //<!—SNOP—>
     }
 }

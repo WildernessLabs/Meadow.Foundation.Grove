@@ -8,6 +8,8 @@ namespace Grove.RTC_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!—SNIP—>
+
         public MeadowApp()
         {
             Console.WriteLine("Initializing...");
@@ -51,5 +53,7 @@ namespace Grove.RTC_Sample
             data = rtc.ReadRAM(0, 56);
             Console.WriteLine(BitConverter.ToString(data));
         }
+
+        //<!—SNOP—>
     }
 }

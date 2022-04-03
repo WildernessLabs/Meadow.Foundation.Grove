@@ -9,11 +9,27 @@ namespace Grove.MiniPIRMotionSensor_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!—SNIP—>
+
         public MeadowApp()
         {
-            var miniPIRMotionSensor = new MiniPIRMotionSensor(Device.CreateDigitalInputPort(Device.Pins.D13, InterruptMode.EdgeBoth, ResistorMode.Disabled));
-            miniPIRMotionSensor.OnMotionStart += (sender) => Console.WriteLine($"Motion start  {DateTime.Now}");
-            miniPIRMotionSensor.OnMotionEnd += (sender) => Console.WriteLine($"Motion end  {DateTime.Now}");
+            var miniPIRMotionSensor = new MiniPIRMotionSensor(
+                Device.CreateDigitalInputPort(
+                    Device.Pins.D13, 
+                    InterruptMode.EdgeBoth, 
+                    ResistorMode.Disabled));
+            
+            miniPIRMotionSensor.OnMotionStart += (sender) =>
+            {
+                Console.WriteLine($"Motion start  {DateTime.Now}");
+            };
+
+            miniPIRMotionSensor.OnMotionEnd += (sender) => 
+            { 
+                Console.WriteLine($"Motion end  {DateTime.Now}"); 
+            };
         }
+
+        //<!—SNOP—>
     }
 }

@@ -11,13 +11,15 @@ namespace Grove.Servo_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!—SNIP—>
+
         public MeadowApp()
         {
             Console.WriteLine("Initialize hardware...");
 
             var servo = new Servo(Device.CreatePwmPort(Device.Pins.D13));
 
-            servo.RotateTo(new Angle(0, AU.Degrees));
+            servo.RotateTo(new Angle(servo.Config.MinimumAngle.Degrees, AU.Degrees));
 
             while (true)
             {
@@ -37,5 +39,7 @@ namespace Grove.Servo_Sample
                 Thread.Sleep(2000);
             }
         }
+
+        //<!—SNOP—>
     }
 }

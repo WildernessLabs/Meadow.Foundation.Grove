@@ -10,6 +10,8 @@ namespace Grove.ThumbJoystick_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!—SNIP—>
+
         ThumbJoystick joystick;
 
         public MeadowApp()
@@ -44,5 +46,7 @@ namespace Grove.ThumbJoystick_Sample
             Console.WriteLine($"Horizontal: {e.New.Horizontal:n2}, Vertical: {e.New.Vertical:n2}");
             Console.WriteLine($"Digital position: {joystick.DigitalPosition}");
         }
+
+        //<!—SNOP—>
     }
 }

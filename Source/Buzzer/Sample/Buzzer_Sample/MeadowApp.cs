@@ -9,6 +9,8 @@ namespace Grove.Buzzer_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!-SNIP->
+
         readonly Buzzer buzzer;
 
         public MeadowApp()
@@ -32,5 +34,7 @@ namespace Grove.Buzzer_Sample
                 await Task.Delay(2500);
             }
         }
+
+        //<!—SNOP—>
     }
 }
