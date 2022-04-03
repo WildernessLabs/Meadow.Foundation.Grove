@@ -9,6 +9,8 @@ namespace Grove.LCD_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!-SNIP->
+
         public MeadowApp()
         {
             Console.WriteLine("Initialize hardware...");
@@ -32,5 +34,7 @@ namespace Grove.LCD_Sample
 
             display.ClearLines();
         }
+
+        //<!—SNOP—>
     }
 }

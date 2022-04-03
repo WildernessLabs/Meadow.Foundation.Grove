@@ -41,12 +41,12 @@ namespace RotaryAngleSensor_Sample
             };
 
             //==== One-off reading use case/pattern
-            ReadMoisture().Wait();
+            Read().Wait();
 
             sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
         }
 
-        protected async Task ReadMoisture()
+        protected async Task Read()
         {
             var result = await sensor.Read();
             Console.WriteLine($"Initial read: {result.Millivolts:N2}mV");

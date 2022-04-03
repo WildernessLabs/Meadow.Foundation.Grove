@@ -8,6 +8,8 @@ namespace Grove.LEDButton_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!-SNIP->
+
         public MeadowApp()
         {
             Console.WriteLine("Initialize hardware...");
@@ -27,5 +29,7 @@ namespace Grove.LEDButton_Sample
                 Console.WriteLine("Grove Button long clicked");
             };
         }
+
+        //<!—SNOP—>
     }
 }

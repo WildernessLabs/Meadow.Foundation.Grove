@@ -9,7 +9,10 @@ namespace Grove.FourDigitDisplay_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!-SNIP->
+
         FourDigitDisplay display;
+        
         public MeadowApp()
         {
             Console.WriteLine("Initializing ...");
@@ -25,5 +28,7 @@ namespace Grove.FourDigitDisplay_Sample
 
             display.Show(chars);
         }
+
+        //<!—SNOP—>
     }
 }

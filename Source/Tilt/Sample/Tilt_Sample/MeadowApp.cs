@@ -8,6 +8,8 @@ namespace Grove.TiltSwitch_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!—SNIP—>
+
         public MeadowApp()
         {
             Console.WriteLine("Initialize hardware...");
@@ -19,5 +21,7 @@ namespace Grove.TiltSwitch_Sample
                 Console.WriteLine(tiltSwitch.IsOn ? "Switch is High" : "Switch is Low");
             };
         }
+
+        //<!—SNOP—>
     }
 }

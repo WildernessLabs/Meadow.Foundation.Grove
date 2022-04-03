@@ -9,6 +9,8 @@ namespace Grove.VibrationMotor_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!—SNIP—>
+
         public MeadowApp()
         {
             Console.WriteLine("Initialize hardware...");
@@ -18,15 +20,15 @@ namespace Grove.VibrationMotor_Sample
             for(int i = 0; i < 5; i++)
             {
                 Console.WriteLine("Motor on");
-                vibrationMotor.StartVibration();
+                vibrationMotor.IsVibrating = true;
                 Thread.Sleep(1000);
 
                 Console.WriteLine("Motor off");
-                vibrationMotor.StopVibration();
+                vibrationMotor.IsVibrating = false;
                 Thread.Sleep(1000);
-
-
             }
         }
+
+        //<!—SNOP—>
     }
 }

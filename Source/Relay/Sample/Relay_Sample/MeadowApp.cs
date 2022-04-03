@@ -9,6 +9,8 @@ namespace Relay_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!-SNIP->
+
         Relay relay;
 
         public MeadowApp()
@@ -36,5 +38,7 @@ namespace Relay_Sample
                 Thread.Sleep(500);
             }
         }
+
+        //<!—SNOP—>
     }
 }

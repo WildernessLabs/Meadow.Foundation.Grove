@@ -3,11 +3,26 @@ using Meadow.Hardware;
 
 namespace Meadow.Foundation.Grove.Sensors.Switches
 {
+    /// <summary>
+    /// Represents a Tilt
+    /// </summary>
     public class Tilt : SpdtSwitch
     {
-        public Tilt(IDigitalInputController device, IPin pin) 
-            : base(device, pin, InterruptMode.EdgeBoth, ResistorMode.InternalPullDown, 50, 2)
-        {
-        }
+        /// <summary>
+        /// Creates a Tilt driver
+        /// </summary>
+        /// <param name="device"></param>
+        /// <param name="pin"></param>
+        public Tilt(
+            IDigitalInputController device, 
+            IPin pin) 
+            : base(
+                  device, 
+                  pin, 
+                  InterruptMode.EdgeBoth, 
+                  ResistorMode.InternalPullDown, 
+                  50, 
+                  2)
+        { }
     }
 }

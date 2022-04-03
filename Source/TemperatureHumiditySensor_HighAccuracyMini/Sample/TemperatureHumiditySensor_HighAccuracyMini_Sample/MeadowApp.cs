@@ -8,6 +8,8 @@ namespace Grove.TemperatureHumiditySensor_HighAccuracyMini_Sample
     // Change F7MicroV2 to F7Micro for V1.x boards
     public class MeadowApp : App<F7MicroV2, MeadowApp>
     {
+        //<!—SNIP—>
+
         public MeadowApp()
         {
             Console.WriteLine("Initialize hardware...");
@@ -40,5 +42,7 @@ namespace Grove.TemperatureHumiditySensor_HighAccuracyMini_Sample
 
             sensor.StartUpdating(TimeSpan.FromSeconds(1));
         }
+
+        //<!—SNOP—>
     }
 }
