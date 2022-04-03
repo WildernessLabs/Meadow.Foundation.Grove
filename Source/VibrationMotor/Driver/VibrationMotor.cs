@@ -1,32 +1,44 @@
-﻿using Meadow.Foundation.Leds;
-using Meadow.Hardware;
+﻿using Meadow.Hardware;
 
 namespace Meadow.Foundation.Grove.HID
 {
+    /// <summary>
+    /// Represents a VibrationMotor
+    /// </summary>
     public class VibrationMotor
     {
-        public bool IsOn => port.State;
-
         readonly IDigitalOutputPort port;
 
-        public VibrationMotor(IDigitalOutputController device, IPin pin) 
-            : this(device.CreateDigitalOutputPort(pin, false))
+        /// <summary>
+        /// Gets/Sets vibration motor status
+        /// </summary>
+        public bool IsVibrating 
         {
+            get => isVibrating;
+            set
+            {
+                isVibrating = value;
+                port.State = isVibrating;
+            }
         }
+        bool isVibrating;
 
+        /// <summary>
+        /// Creates a VibrationMotor driver
+        /// </summary>
+        /// <param name="port"></param>
         public VibrationMotor(IDigitalOutputPort port)
         {
             this.port = port;
         }
 
-        public void StartVibration()
-        {
-            port.State = true;
-        }
-
-        public void StopVibration()
-        {
-            port.State = false;
-        }
+        /// <summary>
+        /// Creates a VibrationMotor driver
+        /// </summary>
+        /// <param name="device"></param>
+        /// <param name="pin"></param>
+        public VibrationMotor(IDigitalOutputController device, IPin pin) 
+            : this(device.CreateDigitalOutputPort(pin, false))
+        { }
     }
 }
