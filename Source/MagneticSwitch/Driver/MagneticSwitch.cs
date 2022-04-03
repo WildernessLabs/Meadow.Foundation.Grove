@@ -4,21 +4,39 @@ using System;
 
 namespace Meadow.Foundation.Grove.Sensors.Switches
 {
+    /// <summary>
+    /// Represents a Magnetic Switch
+    /// </summary>
     public class MagneticSwitch : ISwitch
     {
         IDigitalInputPort port;
 
+        /// <summary>
+        /// Returns the state of the switch
+        /// </summary>
         public bool IsOn => port.State;
 
+        /// <summary>
+        /// Event triggered when status has changed
+        /// </summary>
         public event EventHandler Changed = delegate { };
 
+        /// <summary>
+        /// Creates a MagneticSwitch driver
+        /// </summary>
+        /// <param name="signalPort"></param>
         public MagneticSwitch(IDigitalInputPort signalPort)
         {
             port = signalPort;
 
-            signalPort.Changed += SignalPort_Changed;
+            signalPort.Changed += SignalPortChanged;
         }
 
+        /// <summary>
+        /// Creates a MagneticSwitch driver
+        /// </summary>
+        /// <param name="device"></param>
+        /// <param name="inputPin"></param>
         public MagneticSwitch(
             IDigitalInputController device, 
             IPin inputPin)
@@ -31,7 +49,7 @@ namespace Meadow.Foundation.Grove.Sensors.Switches
                       25))
         { }
 
-        private void SignalPort_Changed(object sender, DigitalPortResult e)
+        private void SignalPortChanged(object sender, DigitalPortResult e)
         {
             Changed?.Invoke(this, EventArgs.Empty);
         }
