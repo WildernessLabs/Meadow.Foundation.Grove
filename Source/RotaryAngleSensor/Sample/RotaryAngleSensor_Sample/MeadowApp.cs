@@ -1,6 +1,6 @@
 ﻿using Meadow;
 using Meadow.Devices;
-using Meadow.Foundation.Sensors.Rotary;
+using Meadow.Foundation.Grove.Sensors.Rotary;
 using System;
 using System.Threading.Tasks;
 
