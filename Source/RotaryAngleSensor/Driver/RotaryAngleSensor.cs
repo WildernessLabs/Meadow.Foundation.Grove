@@ -3,7 +3,7 @@ using Meadow.Hardware;
 using Meadow.Units;
 using System;
 
-namespace Meadow.Foundation.Sensors.Rotary
+namespace Meadow.Foundation.Grove.Sensors.Rotary
 {
     /// <summary>
     /// Represents a rotary angle sensor
