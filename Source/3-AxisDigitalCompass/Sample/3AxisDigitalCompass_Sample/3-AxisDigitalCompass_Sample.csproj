@@ -13,6 +13,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\Meadow.Core\source\Meadow.F7\Meadow.F7.csproj" />
-    <ProjectReference Include="..\..\Driver\3AxisDigitalCompass.csproj" />
+    <ProjectReference Include="..\..\Driver\3-AxisDigitalCompass.csproj" />
   </ItemGroup>
 </Project>
