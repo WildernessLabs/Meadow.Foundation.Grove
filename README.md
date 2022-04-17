@@ -17,6 +17,25 @@ Meadow.Foundation is currently split into three (3) GitHub repos:
 2. [Meadow.Foundation.Featherwings](https://github.com/WildernessLabs/Meadow.Foundation.Featherwings/) contains drivers for hardware that conforms to the [Adafruit Featherwing](https://learn.adafruit.com/adafruit-feather/) form factor
 3. [Meadow.Foundaion.Grove](https://github.com/WildernessLabs/Meadow.Foundation.Grove/) contains drivers for [Seeed Studio Grove](https://www.seeedstudio.com/grove.html) modular hardware peripherals
 
+## Requesting New Drivers
+
+If you have a need for a driver that we don't yet support, you have a couple options:
+
+- Use an existing, similar driver as a template for your new driver. We accept pull requests, but don't require them.
+- Open a new item on the [Issues Tab](https://github.com/WildernessLabs/Meadow.Foundation/issues) and request the driver so we can prioritize it.
+
+# Documentation
+
+You can read more Meadow.Foundation and how to get started in our [developer site](http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/).
+
+## Using
+
+To use Meadow.Foundation, simply add a Nuget reference to the core library (for core helpers and drivers), or to the specific peripheral driver you'd like to use, and the core will come with it.
+
+```bash
+nuget install Meadow.Foundation
+```
+
 # License
 
 Copyright 2019-2022, Wilderness Labs Inc.
