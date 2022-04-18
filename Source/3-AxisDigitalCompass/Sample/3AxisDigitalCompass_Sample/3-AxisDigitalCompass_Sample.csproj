@@ -12,9 +12,7 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Meadow.F7" Version="0.*" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Driver\3AxisDigitalCompass.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Meadow.Core\source\Meadow.F7\Meadow.F7.csproj" />
+    <ProjectReference Include="..\..\Driver\3-AxisDigitalCompass.csproj" />
   </ItemGroup>
 </Project>
