@@ -12,8 +12,10 @@
     <Version>0.1.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Grove I2C 3-axis digital compass</Description>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="..\..\icon.png" Pack="true" PackagePath="" />
     <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Motion.Hmc5883\Driver\Sensors.Motion.Hmc5883.csproj" />
   </ItemGroup>
 </Project>

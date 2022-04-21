@@ -12,8 +12,10 @@
     <Version>0.1.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Grove I2C Temperature and Humidity sensor - High Accuracy and Mini (TH02)</Description>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="..\..\icon.png" Pack="true" PackagePath="" />
     <ProjectReference Include="..\..\..\..\meadow.foundation\Source\Meadow.Foundation.Peripherals\Sensors.Atmospheric.Th02\Driver\Sensors.Atmospheric.Th02.csproj" />
   </ItemGroup>
 </Project>
