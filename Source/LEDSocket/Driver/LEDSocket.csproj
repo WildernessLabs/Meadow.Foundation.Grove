@@ -4,16 +4,18 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <OutputType>Library</OutputType>
     <AssemblyName>LEDSocket</AssemblyName>
-	<Company>Wilderness Labs, Inc</Company>
-	<PackageProjectUrl>http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/</PackageProjectUrl>
-	<PackageId>Meadow.Foundation.Grove.Leds.LEDSocket</PackageId>
-	<RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation</RepositoryUrl>
-	<PackageTags>Meadow.Foundation, Grove, led</PackageTags>
-	<Version>0.1.0</Version>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<Description>Grove GPIO led</Description>
+    <Company>Wilderness Labs, Inc</Company>
+    <PackageProjectUrl>http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/</PackageProjectUrl>
+    <PackageId>Meadow.Foundation.Grove.Leds.LEDSocket</PackageId>
+    <RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation.Grove</RepositoryUrl>
+    <PackageTags>Meadow.Foundation, Grove, led</PackageTags>
+    <Version>0.1.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Grove GPIO led</Description>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Meadow.Foundation" Version="0.*" />
+    <None Include="..\..\icon.png" Pack="true" PackagePath="" />
+    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Core\Meadow.Foundation.Core.csproj" />
   </ItemGroup>
 </Project>

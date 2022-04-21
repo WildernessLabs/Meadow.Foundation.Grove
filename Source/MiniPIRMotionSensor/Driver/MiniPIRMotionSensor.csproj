@@ -4,17 +4,18 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <OutputType>Library</OutputType>
     <AssemblyName>MiniPIRMotionSensor</AssemblyName>
-	<Company>Wilderness Labs, Inc</Company>
-	<PackageProjectUrl>http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/</PackageProjectUrl>
-	<PackageId>Meadow.Foundation.Grove.Sensors.Motion.MiniPIRMotionSensor</PackageId>
-	<RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation</RepositoryUrl>
-	<PackageTags>Meadow.Foundation, Grove, Parallax, PIR</PackageTags>
-	<Version>0.1.0</Version>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<Description>Grove GPIO MiniPIRMotionSensor (Parallax PIR)</Description>
+    <Company>Wilderness Labs, Inc</Company>
+    <PackageProjectUrl>http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/</PackageProjectUrl>
+    <PackageId>Meadow.Foundation.Grove.Sensors.Motion.MiniPIRMotionSensor</PackageId>
+    <RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation.Grove</RepositoryUrl>
+    <PackageTags>Meadow.Foundation, Grove, Parallax, PIR</PackageTags>
+    <Version>0.1.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Grove GPIO MiniPIRMotionSensor (Parallax PIR)</Description>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Meadow.Foundation" Version="0.*" />
-    <PackageReference Include="Meadow.Foundation.Sensors.Motion.ParallaxPir" Version="0.8.49" />
+    <None Include="..\..\icon.png" Pack="true" PackagePath="" />
+    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Motion.ParallaxPir\Driver\Sensors.Motion.ParallaxPir.csproj" />
   </ItemGroup>
 </Project>
