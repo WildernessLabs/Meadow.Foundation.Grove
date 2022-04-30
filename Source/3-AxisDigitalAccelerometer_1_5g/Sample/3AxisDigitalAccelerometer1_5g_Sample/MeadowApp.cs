@@ -10,7 +10,7 @@ namespace Grove.ThreeAxisDigitalAcceleromter1_5g_Sample
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
     public class MeadowApp : App<F7FeatherV2, MeadowApp>
     {
-        //<!-SNIP->
+        //<!=SNIP=>
 
         public MeadowApp()
         {
@@ -46,6 +46,6 @@ namespace Grove.ThreeAxisDigitalAcceleromter1_5g_Sample
             sensor.StartUpdating(TimeSpan.FromMilliseconds(1000));
         }
 
-        //<!—SNOP—>
+        //<!=SNOP=>
     }
 }
