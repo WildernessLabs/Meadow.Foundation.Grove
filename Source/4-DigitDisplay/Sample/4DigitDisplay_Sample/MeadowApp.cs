@@ -9,7 +9,7 @@ namespace Grove.FourDigitDisplay_Sample
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
     public class MeadowApp : App<F7FeatherV2, MeadowApp>
     {
-        //<!-SNIP->
+        //<!=SNIP=>
 
         FourDigitDisplay display;
         
@@ -29,6 +29,6 @@ namespace Grove.FourDigitDisplay_Sample
             display.Show(chars);
         }
 
-        //<!—SNOP—>
+        //<!=SNOP=>
     }
 }

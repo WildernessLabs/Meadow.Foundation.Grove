@@ -9,7 +9,7 @@ namespace LoudnessSensor_Sample
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
     public class MeadowApp : App<F7FeatherV2, MeadowApp>
     {
-        //<!—SNIP—>
+        //<!=SNIP=>
 
         LoudnessSensor sensor;
 
@@ -53,6 +53,6 @@ namespace LoudnessSensor_Sample
             Console.WriteLine($"Initial read: {result.Millivolts:N2}mV");
         }
 
-        //<!—SNOP—>
+        //<!=SNOP=>
     }
 }
