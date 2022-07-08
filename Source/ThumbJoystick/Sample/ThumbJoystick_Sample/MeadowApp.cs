@@ -31,7 +31,7 @@ namespace Grove.ThumbJoystick_Sample
 
         public override async Task Run()
         {
-            await joystick.SetCenterPosition(); //fire and forget
+            await joystick.SetCenterPosition();
 
             joystick.StartUpdating(TimeSpan.FromMilliseconds(20));
         }

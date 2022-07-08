@@ -17,7 +17,7 @@ namespace Grove.Buzzer_Sample
         {
             Console.WriteLine("Initialize...");
 
-            speaker = new Speaker(Device.CreatePwmPort(Device.Pins.D13));
+            speaker = new Speaker(Device, Device.Pins.D13);
 
             return Task.CompletedTask;
         }
@@ -33,8 +33,6 @@ namespace Grove.Buzzer_Sample
 
                 await Task.Delay(2500);
             }
-
-            return Task.CompletedTask;
         }
 
         //<!=SNOP=>

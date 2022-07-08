@@ -1,4 +1,5 @@
-﻿using Meadow.Devices;
+﻿using Meadow;
+using Meadow.Devices;
 using Meadow.Foundation.Grove.Audio;
 using System;
 using System.Threading.Tasks;
@@ -32,8 +33,6 @@ namespace Grove.Buzzer_Sample
 
                 await Task.Delay(2500);
             }
-
-            return Task.CompletedTask;
         }
 
         //<!=SNOP=>

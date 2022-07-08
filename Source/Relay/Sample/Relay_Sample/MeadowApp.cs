@@ -2,7 +2,6 @@
 using Meadow.Devices;
 using Meadow.Foundation.Grove.Relays;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Relay_Sample

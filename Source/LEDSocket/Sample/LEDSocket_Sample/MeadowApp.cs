@@ -1,4 +1,5 @@
-﻿using Meadow.Devices;
+﻿using Meadow;
+using Meadow.Devices;
 using Meadow.Foundation.Grove.Leds;
 using System;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace Grove.LEDSocket_Sample
             Console.WriteLine("Initialize...");
 
             led = new LEDSocket(Device, Device.Pins.D13);
+
+            return Task.CompletedTask;
         }
 
         public override Task Run()

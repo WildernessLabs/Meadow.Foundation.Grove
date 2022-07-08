@@ -21,7 +21,6 @@ namespace Grove.WaterSensor_Sample
 
             waterSensor.Subscribe(WaterSensor.CreateObserver(
                 h => Console.WriteLine($"Water level changed by 10 mm; new: {h.New}, old: {h.Old}"),
-                // TODO: revisit this
                 null //e => { return Math.Abs(e.Delta) > 0.1f; }
             ));
 

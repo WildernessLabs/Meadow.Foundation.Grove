@@ -1,4 +1,5 @@
-﻿using Meadow.Devices;
+﻿using Meadow;
+using Meadow.Devices;
 using Meadow.Foundation.Grove.Sensors.Buttons;
 using System;
 using System.Threading.Tasks;
@@ -33,6 +34,8 @@ namespace Grove.LEDButton_Sample
             {
                 Console.WriteLine("Grove Button long clicked");
             };
+
+            return Task.CompletedTask;
         }
 
         //<!=SNOP=>

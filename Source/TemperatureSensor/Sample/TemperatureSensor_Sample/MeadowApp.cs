@@ -17,25 +17,25 @@ namespace TemperatureSensor_Sample
         {
             Console.WriteLine("Initialize...");
 
-            // configure our sensor
             sensor = new TemperatureSensor(Device, Device.Pins.A01);
 
-            // Example that uses an IObservable subscription to only be notified when the voltage changes by at least 500mV
             var consumer = TemperatureSensor.CreateObserver(
-                handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),
-                // only notify if the change is greater than 0.5V
+                handler: result => 
+                { 
+                    Console.WriteLine($"Observer filter satisfied - " +
+                        $"new: {result.New.Millivolts:N2}mV, " +
+                        $"old: {result.Old?.Millivolts:N2}mV"); 
+                },
                 filter: result =>
                 {
                     if (result.Old is { } old)
-                    { //c# 8 pattern match syntax. checks for !null and assigns var.
+                    {   //c# 8 pattern match syntax. checks for !null and assigns var.
                         return (result.New - old).Abs().Millivolts > 500;
                     }
                     return false;
                 });
-
             sensor.Subscribe(consumer);
 
-            // classical .NET events can also be used:
             sensor.Updated += (sender, result) =>
             {
                 Console.WriteLine($"Voltage Changed, new: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV");

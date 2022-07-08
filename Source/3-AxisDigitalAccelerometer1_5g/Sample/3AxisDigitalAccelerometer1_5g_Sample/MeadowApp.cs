@@ -1,4 +1,5 @@
-﻿using Meadow.Devices;
+﻿using Meadow;
+using Meadow.Devices;
 using Meadow.Foundation.Grove.Sensors.Motion;
 using Meadow.Units;
 using System;

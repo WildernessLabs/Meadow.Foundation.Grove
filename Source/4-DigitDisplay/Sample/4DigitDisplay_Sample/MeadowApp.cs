@@ -1,4 +1,5 @@
-﻿using Meadow.Devices;
+﻿using Meadow;
+using Meadow.Devices;
 using Meadow.Foundation.Displays;
 using Meadow.Foundation.Grove.Displays;
 using System;

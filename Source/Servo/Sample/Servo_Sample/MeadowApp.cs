@@ -3,7 +3,6 @@ using Meadow.Devices;
 using Meadow.Foundation.Grove.Servos;
 using Meadow.Units;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 using AU = Meadow.Units.Angle.UnitType;
 
@@ -20,7 +19,7 @@ namespace Grove.Servo_Sample
         {
             Console.WriteLine("Initialize...");
 
-            var servo = new Servo(Device.CreatePwmPort(Device.Pins.D13));
+            var servo = new Servo(Device, Device.Pins.D13);
 
             return Task.CompletedTask;
         }
