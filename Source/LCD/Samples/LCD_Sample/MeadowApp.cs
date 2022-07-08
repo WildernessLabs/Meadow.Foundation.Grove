@@ -1,27 +1,34 @@
-﻿using Meadow;
-using Meadow.Devices;
+﻿using Meadow.Devices;
 using Meadow.Foundation.Grove.Displays;
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Grove.LCD_Sample
 {
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
-    public class MeadowApp : App<F7FeatherV2, MeadowApp>
+    public class MeadowApp : App<F7FeatherV2>
     {
         //<!=SNIP=>
 
-        public MeadowApp()
+        LCD display;
+
+        public override Task Initialize()
         {
-            Console.WriteLine("Initialize hardware...");
+            Console.WriteLine("Initialize...");
 
             var display = new LCD(Device.CreateI2cBus());
 
+            return Task.CompletedTask;
+        }
+
+        public override async Task Run()
+        {
             display.Write("Hello Grove");
 
-            Thread.Sleep(2000);
+            await Task.Delay(2000);
 
-            for(byte i = 0; i < 16; i++)
+            for (byte i = 0; i < 16; i++)
             {
                 display.SetCursorPosition(i, 0);
                 display.Write("1");

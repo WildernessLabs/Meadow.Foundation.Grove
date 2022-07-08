@@ -3,15 +3,16 @@ using Meadow.Devices;
 using Meadow.Foundation.Grove.Sensors.Motion;
 using Meadow.Hardware;
 using System;
+using System.Threading.Tasks;
 
 namespace Grove.MiniPIRMotionSensor_Sample
 {
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
-    public class MeadowApp : App<F7FeatherV2, MeadowApp>
+    public class MeadowApp : App<F7FeatherV2>
     {
         //<!=SNIP=>
 
-        public MeadowApp()
+        public override Task Initialize()
         {
             var miniPIRMotionSensor = new MiniPIRMotionSensor(
                 Device.CreateDigitalInputPort(
@@ -28,6 +29,8 @@ namespace Grove.MiniPIRMotionSensor_Sample
             { 
                 Console.WriteLine($"Motion end  {DateTime.Now}"); 
             };
+
+            return Task.CompletedTask;
         }
 
         //<!=SNOP=>

@@ -2,19 +2,22 @@
 using Meadow.Devices;
 using Meadow.Foundation.Grove.Sensors.Atmospheric;
 using System;
+using System.Threading.Tasks;
 
 namespace Grove.TemperatureHumiditySensor_HighAccuracyMini_Sample
 {
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
-    public class MeadowApp : App<F7FeatherV2, MeadowApp>
+    public class MeadowApp : App<F7FeatherV2>
     {
         //<!=SNIP=>
 
-        public MeadowApp()
-        {
-            Console.WriteLine("Initialize hardware...");
+        TemperatureHumiditySensor_HighAccuracyMini sensor;
 
-            var sensor = new TemperatureHumiditySensor_HighAccuracyMini(Device.CreateI2cBus());
+        public override Task Initialize()
+        {
+            Console.WriteLine("Initialize...");
+
+            sensor = new TemperatureHumiditySensor_HighAccuracyMini(Device.CreateI2cBus());
 
             var consumer = TemperatureHumiditySensor_HighAccuracyMini.CreateObserver(
                 handler: result =>
@@ -40,7 +43,14 @@ namespace Grove.TemperatureHumiditySensor_HighAccuracyMini_Sample
                 Console.WriteLine($"  Relative Humidity: {result.New.Humidity?.Percent:N2}%");
             };
 
+            return Task.CompletedTask;
+        }
+
+        public override Task Run()
+        {
             sensor.StartUpdating(TimeSpan.FromSeconds(1));
+
+            return Task.CompletedTask;
         }
 
         //<!=SNOP=>
