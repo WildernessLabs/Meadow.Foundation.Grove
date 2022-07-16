@@ -2,30 +2,28 @@
 using Meadow.Devices;
 using Meadow.Foundation.Grove.Relays;
 using System;
-using System.Threading;
+using System.Threading.Tasks;
 
 namespace Relay_Sample
 {
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
-    public class MeadowApp : App<F7FeatherV2, MeadowApp>
+    public class MeadowApp : App<F7FeatherV2>
     {
         //<!=SNIP=>
 
         Relay relay;
 
-        public MeadowApp()
+        public override Task Initialize()
         {
-            Console.WriteLine("Initialize hardware...");
+            Console.WriteLine("Initialize...");
 
             relay = new Relay(Device, Device.Pins.D13);
 
-            TestRelay();
+            return Task.CompletedTask;
         }
 
-        void TestRelay()
+        public override async Task Run()
         {
-            Console.WriteLine("TestRelay...");
-
             var state = false;
 
             while (true)
@@ -35,7 +33,7 @@ namespace Relay_Sample
                 Console.WriteLine($"- State: {state}");
                 relay.IsOn = state;
 
-                Thread.Sleep(500);
+                await Task.Delay(500);
             }
         }
 

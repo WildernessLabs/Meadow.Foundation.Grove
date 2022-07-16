@@ -2,24 +2,29 @@
 using Meadow.Devices;
 using Meadow.Foundation.Grove.Sensors.Motion;
 using System;
+using System.Threading.Tasks;
 
 namespace Grove.VibrationSensor_Sample
 {
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
-    public class MeadowApp : App<F7FeatherV2, MeadowApp>
+    public class MeadowApp : App<F7FeatherV2>
     {
         //<!=SNIP=>
 
-        public MeadowApp()
+        VibrationSensor sensor;
+
+        public override Task Initialize()
         {
-            Console.WriteLine("Initialize hardware...");
+            Console.WriteLine("Initialize...");
 
-            var vibrationSensor = new VibrationSensor(Device, Device.Pins.D13);
+            sensor = new VibrationSensor(Device, Device.Pins.D13);
 
-            vibrationSensor.VibrationDetected += (s, e) => 
-            { 
-                Console.WriteLine("Motion detected"); 
+            sensor.VibrationDetected += (s, e) =>
+            {
+                Console.WriteLine("Motion detected");
             };
+
+            return Task.CompletedTask;
         }
 
         //<!=SNOP=>

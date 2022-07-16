@@ -7,47 +7,37 @@ using System.Threading.Tasks;
 namespace Grove.WaterSensor_Sample
 {
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
-    public class MeadowApp : App<F7FeatherV2, MeadowApp>
+    public class MeadowApp : App<F7FeatherV2>
     {
         //<!=SNIP=>
 
         WaterSensor waterSensor;
 
-        public MeadowApp()
+        public override Task Initialize()
         {
-            Console.WriteLine("Initializing...");
+            Console.WriteLine("Initialize...");
 
-            // configure our AnalogWaterLevel sensor
-            waterSensor = new WaterSensor(
-                device: Device,
-                analogPin: Device.Pins.A01
-            );
+            waterSensor = new WaterSensor(Device, Device.Pins.A01);
 
-            // Example that uses an IObersvable subscription to only be notified
-            // when the level changes by at least 0.1cm
             waterSensor.Subscribe(WaterSensor.CreateObserver(
                 h => Console.WriteLine($"Water level changed by 10 mm; new: {h.New}, old: {h.Old}"),
-                // TODO: revisit this
                 null //e => { return Math.Abs(e.Delta) > 0.1f; }
             ));
 
-            // classical .NET events can also be used:
-            waterSensor.Updated += (object sender, IChangeResult<float> e) => {
+            waterSensor.Updated += (object sender, IChangeResult<float> e) => 
+            {
                 Console.WriteLine($"Level Changed, level: {e.New}cm");
             };
 
-            // Get an initial reading.
-            ReadLevel().Wait();
-
-            // Spin up the sampling thread so that events are raised and
-            // IObservable notifications are sent.
-            waterSensor.StartUpdating(TimeSpan.FromSeconds(5));
+            return Task.CompletedTask;
         }
 
-        async Task ReadLevel()
+        public override async Task Run()
         {
             var conditions = await waterSensor.Read();
-            Console.WriteLine($"Initial level: { conditions }");
+            Console.WriteLine($"Initial level: {conditions}");
+
+            waterSensor.StartUpdating(TimeSpan.FromSeconds(5));
         }
 
         //<!=SNOP=>

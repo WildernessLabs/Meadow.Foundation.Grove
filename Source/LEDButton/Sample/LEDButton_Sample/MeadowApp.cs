@@ -2,32 +2,40 @@
 using Meadow.Devices;
 using Meadow.Foundation.Grove.Sensors.Buttons;
 using System;
+using System.Threading.Tasks;
 
 namespace Grove.LEDButton_Sample
 {
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
-    public class MeadowApp : App<F7FeatherV2, MeadowApp>
+    public class MeadowApp : App<F7FeatherV2>
     {
         //<!=SNIP=>
 
-        public MeadowApp()
+        LEDButton ledButton;
+
+        public override Task Initialize()
         {
-            Console.WriteLine("Initialize hardware...");
+            Console.WriteLine("Initialize...");
 
-            var button = new LEDButton(Device, Device.Pins.D12, Device.Pins.D13);
+            ledButton = new LEDButton(
+                device: Device, 
+                buttonPin: Device.Pins.D12, 
+                ledPin: Device.Pins.D13);
 
-            button.LongClickedThreshold = TimeSpan.FromMilliseconds(1500);
+            ledButton.LongClickedThreshold = TimeSpan.FromMilliseconds(1500);
 
-            button.Clicked += (s, e) =>
+            ledButton.Clicked += (s, e) =>
             {
                 Console.WriteLine("Grove Button clicked");
-                button.IsLedOn = !button.IsLedOn;
+                ledButton.IsLedOn = !ledButton.IsLedOn;
             };
 
-            button.LongClicked += (s, e) =>
+            ledButton.LongClicked += (s, e) =>
             {
                 Console.WriteLine("Grove Button long clicked");
             };
+
+            return Task.CompletedTask;
         }
 
         //<!=SNOP=>
