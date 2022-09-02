@@ -47,7 +47,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{BB0480
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{1CA2490F-2D87-4E3B-8104-263E774FD652}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3AxisDigitalAccelerometer1_5g_Sample", "3-AxisDigitalAccelerometer1_5g\Sample\3AxisDigitalAccelerometer1_5g_Sample\3AxisDigitalAccelerometer1_5g_Sample.csproj", "{B2F091D8-DDC9-4E7C-91B2-680B57B61EBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3-AxisDigitalAccelerometer1_5g_Sample", "3-AxisDigitalAccelerometer1_5g\Sample\3-AxisDigitalAccelerometer1_5g_Sample\3-AxisDigitalAccelerometer1_5g_Sample.csproj", "{B2F091D8-DDC9-4E7C-91B2-680B57B61EBA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3-AxisDigitalAccelerometer16g", "3-AxisDigitalAccelerometer16g\Driver\3-AxisDigitalAccelerometer16g.csproj", "{A52B793D-A739-49B8-BA00-38A43CC2B342}"
 EndProject
