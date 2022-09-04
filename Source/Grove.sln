@@ -21,11 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Touch_Sample", "Touch\Sampl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-DigitDisplay", "4-DigitDisplay", "{8B360807-A285-4879-AF7B-9B5C510ED739}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4DigitDisplay", "4-DigitDisplay\Driver\4DigitDisplay.csproj", "{9D5DFC98-B05A-4583-99D7-B4ED46FE0312}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4-DigitDisplay", "4-DigitDisplay\Driver\4-DigitDisplay.csproj", "{9D5DFC98-B05A-4583-99D7-B4ED46FE0312}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{73423442-14DB-479B-9EEE-6EE4F31235E6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4DigitDisplay_Sample", "4-DigitDisplay\Sample\4DigitDisplay_Sample\4DigitDisplay_Sample.csproj", "{99DA7132-5410-47DA-A69E-194D278EBC4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4-DigitDisplay_Sample", "4-DigitDisplay\Sample\4-DigitDisplay_Sample\4-DigitDisplay_Sample.csproj", "{99DA7132-5410-47DA-A69E-194D278EBC4A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LEDSocket", "LEDSocket", "{01CC2E3E-0098-439D-A29B-2304612E400D}"
 EndProject
