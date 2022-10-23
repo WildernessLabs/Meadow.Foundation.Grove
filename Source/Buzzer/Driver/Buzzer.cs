@@ -1,5 +1,6 @@
 ﻿using Meadow.Foundation.Audio;
 using Meadow.Hardware;
+using Meadow.Units;
 
 namespace Meadow.Foundation.Grove.Audio
 {
@@ -26,7 +27,7 @@ namespace Meadow.Foundation.Grove.Audio
         public Buzzer(
             IPwmOutputController device, 
             IPin pin, 
-            float frequency = 100, 
+            Frequency frequency, 
             float dutyCycle = 0)
             : base(device, pin, frequency, dutyCycle)
         { }

@@ -1,5 +1,6 @@
 ﻿using Meadow.Foundation.Sensors.Switches;
 using Meadow.Hardware;
+using System;
 
 namespace Meadow.Foundation.Grove.Sensors.Switches
 {
@@ -13,8 +14,16 @@ namespace Meadow.Foundation.Grove.Sensors.Switches
         /// </summary>
         /// <param name="device"></param>
         /// <param name="pin"></param>
-        public SwitchP(IDigitalInputController device, IPin pin) 
-            : base(device, pin, InterruptMode.EdgeBoth, ResistorMode.InternalPullDown, 20, 0)
+        public SwitchP(
+            IDigitalInputController device, 
+            IPin pin) 
+            : base(
+                device, 
+                pin, 
+                InterruptMode.EdgeBoth, 
+                ResistorMode.InternalPullDown,
+                TimeSpan.FromMilliseconds(20),
+                TimeSpan.Zero)
         { }
     }
 }

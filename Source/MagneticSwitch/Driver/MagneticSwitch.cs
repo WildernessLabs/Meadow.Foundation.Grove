@@ -41,12 +41,12 @@ namespace Meadow.Foundation.Grove.Sensors.Switches
             IDigitalInputController device, 
             IPin inputPin)
             : this(
-                  device.CreateDigitalInputPort(
-                      inputPin, 
-                      InterruptMode.EdgeBoth, 
-                      ResistorMode.InternalPullUp, 
-                      0, 
-                      25))
+                device.CreateDigitalInputPort(
+                    inputPin, 
+                    InterruptMode.EdgeBoth, 
+                    ResistorMode.InternalPullUp,
+                    TimeSpan.Zero,
+                    TimeSpan.FromMilliseconds(25)))
         { }
 
         private void SignalPortChanged(object sender, DigitalPortResult e)

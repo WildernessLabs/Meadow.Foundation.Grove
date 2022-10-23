@@ -16,6 +16,6 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
-    <PackageReference Include="Meadow.Foundation.Displays.Tm1637" Version="0.*" />
+    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Displays.Tm1637\Driver\Displays.Tm1637.csproj" />
   </ItemGroup>
 </Project>

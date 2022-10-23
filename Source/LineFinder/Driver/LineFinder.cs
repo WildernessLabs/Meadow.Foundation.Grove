@@ -41,7 +41,13 @@ namespace Meadow.Foundation.Grove.Sensors.Light
         /// <param name="device"></param>
         /// <param name="inputPin"></param>
         public LineFinder(IDigitalInputController device, IPin inputPin) 
-            : this(device.CreateDigitalInputPort(inputPin, InterruptMode.EdgeBoth, ResistorMode.InternalPullUp, 0, 25))
+            : this(
+                device.CreateDigitalInputPort(
+                    inputPin, 
+                    InterruptMode.EdgeBoth, 
+                    ResistorMode.InternalPullUp,
+                    TimeSpan.Zero,
+                    TimeSpan.FromMilliseconds(25)))
         { }
 
         void SignalPortChanged(object sender, DigitalPortResult e)

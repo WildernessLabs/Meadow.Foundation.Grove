@@ -1,5 +1,6 @@
 ﻿using Meadow.Foundation.Sensors.Switches;
 using Meadow.Hardware;
+using System;
 
 namespace Meadow.Foundation.Grove.Sensors.Switches
 {
@@ -20,9 +21,9 @@ namespace Meadow.Foundation.Grove.Sensors.Switches
                   device, 
                   pin, 
                   InterruptMode.EdgeBoth, 
-                  ResistorMode.InternalPullDown, 
-                  50, 
-                  2)
+                  ResistorMode.InternalPullDown,
+                  TimeSpan.FromMilliseconds(50),
+                  TimeSpan.FromMilliseconds(2))
         { }
     }
 }
