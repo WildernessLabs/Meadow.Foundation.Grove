@@ -1,6 +1,7 @@
 ﻿using Meadow;
 using Meadow.Devices;
 using Meadow.Foundation.Grove.Audio;
+using Meadow.Units;
 using System;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ namespace Grove.Buzzer_Sample
         {
             Console.WriteLine("Initialize...");
 
-            speaker = new Speaker(Device, Device.Pins.D13);
+            speaker = new Speaker(Device, Device.Pins.D13, new Frequency(440));
 
             return Task.CompletedTask;
         }
@@ -27,9 +28,9 @@ namespace Grove.Buzzer_Sample
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine("Playing A major triad starting at A4");
-                await speaker.PlayTone(440, 500); //A
-                await speaker.PlayTone(554.37f, 500); //C#
-                await speaker.PlayTone(659.25f, 500); //E
+                await speaker.PlayTone(new Frequency(440, Frequency.UnitType.Hertz), TimeSpan.FromMilliseconds(500)); //A
+                await speaker.PlayTone(new Frequency(554.37f, Frequency.UnitType.Hertz), TimeSpan.FromMilliseconds(500)); //C#
+                await speaker.PlayTone(new Frequency(659.25f, Frequency.UnitType.Hertz), TimeSpan.FromMilliseconds(500)); //E
 
                 await Task.Delay(2500);
             }

@@ -16,6 +16,6 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
-    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Motion.Adxl3xx\Driver\Sensors.Motion.Adxl3xx.csproj" />
+    <PackageReference Include="Meadow.Foundation.Sensors.Motion.Adxl3xx" Version="0.*" />
   </ItemGroup>
 </Project>
