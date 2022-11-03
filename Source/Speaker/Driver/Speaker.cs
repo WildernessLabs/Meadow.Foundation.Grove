@@ -1,6 +1,8 @@
 ﻿using Meadow.Foundation.Audio;
 using Meadow.Hardware;
 using Meadow.Units;
+using System;
+using System.Threading;
 
 namespace Meadow.Foundation.Grove.Audio
 {
@@ -20,20 +22,16 @@ namespace Meadow.Foundation.Grove.Audio
         /// <summary>
         /// Creates a Speaker driver
         /// </summary>
-        /// <param name="device"></param>
-        /// <param name="pin"></param>
-        /// <param name="frequency"></param>
-        /// <param name="dutyCycle"></param>
+        /// <param name="device">The Pwm controller connected to the buzzer (typically Meadow)</param>
+        /// <param name="pin">The pin connected to the buzzer/param>
         public Speaker(
             IPwmOutputController device, 
-            IPin pin, 
-            Frequency frequency, 
-            float dutyCycle = 0)
+            IPin pin)
             : base(
                 device, 
                 pin, 
-                frequency, 
-                dutyCycle)
+                new Frequency(440), 
+                0f)
         { }
     }
 }
