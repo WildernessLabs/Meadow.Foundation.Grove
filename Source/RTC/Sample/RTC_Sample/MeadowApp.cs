@@ -2,22 +2,28 @@
 using Meadow.Devices;
 using Meadow.Foundation.Grove.RTCs;
 using System;
+using System.Threading.Tasks;
 
 namespace Grove.RTC_Sample
 {
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
-    public class MeadowApp : App<F7FeatherV2, MeadowApp>
+    public class MeadowApp : App<F7FeatherV2>
     {
         //<!=SNIP=>
 
-        public MeadowApp()
+        RTC rtc;
+
+        public override Task Initialize()
         {
-            Console.WriteLine("Initializing...");
+            Console.WriteLine("Initialize...");
 
-            var rtc = new RTC(Device.CreateI2cBus());
+            rtc = new RTC(Device.CreateI2cBus());
 
-            Console.WriteLine("rtc created");
+            return Task.CompletedTask;
+        }
 
+        public override Task Run()
+        {
             var running = rtc.IsRunning;
 
             Console.WriteLine($"{(running ? "is running" : "is not running")}");
@@ -38,7 +44,7 @@ namespace Grove.RTC_Sample
             dateTime = rtc.GetTime();
             Console.WriteLine($" RTC current time is: {dateTime:MM/dd/yy HH:mm:ss}");
 
-            Random rand = new Random();
+            var rand = new Random();
 
             var data = new byte[56];
 
@@ -52,6 +58,8 @@ namespace Grove.RTC_Sample
             Console.Write($" Reading from RTC RAM : ");
             data = rtc.ReadRAM(0, 56);
             Console.WriteLine(BitConverter.ToString(data));
+
+            return Task.CompletedTask;
         }
 
         //<!=SNOP=>

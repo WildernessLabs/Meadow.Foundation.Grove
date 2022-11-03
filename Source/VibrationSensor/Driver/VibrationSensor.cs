@@ -31,12 +31,12 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
             IDigitalInputController device, 
             IPin inputPin) 
             : this(
-                  device.CreateDigitalInputPort(
-                      inputPin, 
-                      InterruptMode.EdgeRising, 
-                      ResistorMode.InternalPullUp, 
-                      0, 
-                      25))
+                device.CreateDigitalInputPort(
+                    inputPin, 
+                    InterruptMode.EdgeRising, 
+                    ResistorMode.InternalPullUp,
+                    TimeSpan.Zero,
+                    TimeSpan.FromMilliseconds(25)))
         { }
 
         private void SignalPortChanged(object sender, DigitalPortResult e)

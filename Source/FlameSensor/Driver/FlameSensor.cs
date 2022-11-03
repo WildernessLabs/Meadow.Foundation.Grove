@@ -27,14 +27,16 @@ namespace Meadow.Foundation.Grove.Sensors.Environmental
         /// </summary>
         /// <param name="device"></param>
         /// <param name="inputPin"></param>
-        public FlameSensor(IDigitalInputController device, IPin inputPin) 
+        public FlameSensor(
+            IDigitalInputController device, 
+            IPin inputPin) 
             : this(
                   device.CreateDigitalInputPort(
                       inputPin, 
                       InterruptMode.EdgeBoth, 
                       ResistorMode.InternalPullUp, 
-                      0, 
-                      25))
+                      TimeSpan.Zero, 
+                      TimeSpan.FromMilliseconds(25)))
         { }
 
         private void SignalPortChanged(object sender, DigitalPortResult e)

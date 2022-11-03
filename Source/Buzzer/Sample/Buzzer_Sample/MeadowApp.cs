@@ -1,36 +1,37 @@
 ﻿using Meadow;
 using Meadow.Devices;
 using Meadow.Foundation.Grove.Audio;
+using Meadow.Units;
 using System;
 using System.Threading.Tasks;
 
 namespace Grove.Buzzer_Sample
 {
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
-    public class MeadowApp : App<F7FeatherV2, MeadowApp>
+    public class MeadowApp : App<F7FeatherV2>
     {
         //<!=SNIP=>
 
-        readonly Buzzer buzzer;
+        Buzzer buzzer;
 
-        public MeadowApp()
+        public override Task Initialize()
         {
-            Console.WriteLine("Initialize hardware...");
+            Console.WriteLine("Initialize...");
 
-            buzzer = new Buzzer(Device.CreatePwmPort(Device.Pins.D13));
+            buzzer = new Buzzer(Device, Device.Pins.D13, new Frequency(440));
 
-            _ = PlayTriad();
+            return Task.CompletedTask;
         }
 
-        async Task PlayTriad()
+        public override async Task Run()
         {
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine("Playing A major triad starting at A4");
-                await buzzer.PlayTone(440, 500); //A
-                await buzzer.PlayTone(554.37f, 500); //C#
-                await buzzer.PlayTone(659.25f, 500); //E
-                
+                await buzzer.PlayTone(new Frequency(440, Frequency.UnitType.Hertz), TimeSpan.FromMilliseconds(500)); //A
+                await buzzer.PlayTone(new Frequency(554.37f, Frequency.UnitType.Hertz), TimeSpan.FromMilliseconds(500)); //C#
+                await buzzer.PlayTone(new Frequency(659.25f, Frequency.UnitType.Hertz), TimeSpan.FromMilliseconds(500)); //E
+
                 await Task.Delay(2500);
             }
         }

@@ -1,5 +1,6 @@
 ﻿using Meadow.Foundation.Audio;
 using Meadow.Hardware;
+using Meadow.Units;
 
 namespace Meadow.Foundation.Grove.Audio
 {
@@ -11,7 +12,7 @@ namespace Meadow.Foundation.Grove.Audio
         /// <summary>
         /// Creates a new Buzzer driver
         /// </summary>
-        /// <param name="port"></param>
+        /// <param name="port">The PwmPort used to drive the Buzzer</param>
         public Buzzer(IPwmPort port)
             : base(port)
         { }
@@ -19,16 +20,12 @@ namespace Meadow.Foundation.Grove.Audio
         /// <summary>
         /// Creates a new Buzzer driver
         /// </summary>
-        /// <param name="device"></param>
-        /// <param name="pin"></param>
-        /// <param name="frequency"></param>
-        /// <param name="dutyCycle"></param>
+        /// <param name="device">The Pwm controller connected to the buzzer (typically Meadow)</param>
+        /// <param name="pin">The pin connected to the buzzer/param>
         public Buzzer(
             IPwmOutputController device, 
-            IPin pin, 
-            float frequency = 100, 
-            float dutyCycle = 0)
-            : base(device, pin, frequency, dutyCycle)
+            IPin pin)
+            : base(device, pin, new Frequency(440))
         { }
     }
 }

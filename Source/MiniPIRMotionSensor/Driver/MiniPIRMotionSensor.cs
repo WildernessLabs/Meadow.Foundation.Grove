@@ -1,5 +1,6 @@
 ﻿using Meadow.Foundation.Sensors.Motion;
 using Meadow.Hardware;
+using System;
 
 namespace Meadow.Foundation.Grove.Sensors.Motion
 {
@@ -11,7 +12,7 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
         /// <summary>
         /// Creates a MiniPIRMotionSensor driver
         /// </summary>
-        /// <param name="digitalInputPort"></param>
+        /// <param name="digitalInputPort">The port connected to the PIR</param>
         public MiniPIRMotionSensor(IDigitalInputPort digitalInputPort)
             : base(digitalInputPort)
         { }
@@ -19,27 +20,27 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
         /// <summary>
         /// Creates a MiniPIRMotionSensor driver
         /// </summary>
-        /// <param name="device"></param>
-        /// <param name="pin"></param>
-        /// <param name="interruptMode"></param>
-        /// <param name="resistorMode"></param>
-        /// <param name="debounceDuration"></param>
-        /// <param name="glitchFilterCycleCount"></param>
+        /// <param name="device">The Meadow device</param>
+        /// <param name="pin">The pin connected to the PIR sensor</param>
+        /// <param name="interruptMode">The interrupt mode of the pin</param>
+        /// <param name="resistorMode">The resistor mode of the pin</param>
+        /// <param name="debounceDuration">The debounce duration</param>
+        /// <param name="glitchDuration">The glitch duration (can typically be set to zero)</param>
         public MiniPIRMotionSensor(
             IDigitalInputController device, 
             IPin pin,
             InterruptMode 
             interruptMode, 
             ResistorMode resistorMode, 
-            int debounceDuration = 20, 
-            int glitchFilterCycleCount = 0) 
+            TimeSpan debounceDuration,
+            TimeSpan glitchDuration) 
             : base(
                   device, 
                   pin, 
                   interruptMode, 
                   resistorMode, 
                   debounceDuration, 
-                  glitchFilterCycleCount)
+                  glitchDuration)
         { }
     }
 }

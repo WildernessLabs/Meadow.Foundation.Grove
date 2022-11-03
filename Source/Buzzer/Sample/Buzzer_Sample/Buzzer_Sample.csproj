@@ -2,11 +2,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AssemblyName>App</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Meadow.F7" Version="0.*" />
-    <ProjectReference Include="..\..\Driver\Buzzer.csproj" />
+    <PackageReference Include="Meadow.Foundation.Grove.Audio.Buzzer" Version="0.*" />
   </ItemGroup>
 </Project>

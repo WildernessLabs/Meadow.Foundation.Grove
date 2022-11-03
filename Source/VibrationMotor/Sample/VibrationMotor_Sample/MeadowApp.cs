@@ -2,30 +2,37 @@
 using Meadow.Devices;
 using Meadow.Foundation.Grove.HID;
 using System;
-using System.Threading;
+using System.Threading.Tasks;
 
 namespace Grove.VibrationMotor_Sample
 {
     // Change F7FeatherV2 to F7FeatherV1 for V1.x boards
-    public class MeadowApp : App<F7FeatherV2, MeadowApp>
+    public class MeadowApp : App<F7FeatherV2>
     {
         //<!=SNIP=>
 
-        public MeadowApp()
+        VibrationMotor vibrationMotor;
+
+        public override Task Initialize()
         {
-            Console.WriteLine("Initialize hardware...");
+            Console.WriteLine("Initialize...");
 
-            var vibrationMotor = new VibrationMotor(Device, Device.Pins.D13);
+            vibrationMotor = new VibrationMotor(Device, Device.Pins.D13);
 
-            for(int i = 0; i < 5; i++)
+            return Task.CompletedTask;
+        }
+
+        public override async Task Run()
+        {
+            for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine("Motor on");
                 vibrationMotor.IsVibrating = true;
-                Thread.Sleep(1000);
+                await Task.Delay(1000);
 
                 Console.WriteLine("Motor off");
                 vibrationMotor.IsVibrating = false;
-                Thread.Sleep(1000);
+                await Task.Delay(1000);
             }
         }
 
