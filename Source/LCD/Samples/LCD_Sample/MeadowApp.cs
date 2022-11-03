@@ -18,7 +18,7 @@ namespace Grove.LCD_Sample
         {
             Console.WriteLine("Initialize...");
 
-            var display = new LCD(Device.CreateI2cBus());
+            display = new LCD(Device.CreateI2cBus());
 
             return Task.CompletedTask;
         }

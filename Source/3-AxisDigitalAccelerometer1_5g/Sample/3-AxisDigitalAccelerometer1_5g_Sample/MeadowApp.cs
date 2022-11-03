@@ -20,7 +20,7 @@ namespace Grove.ThreeAxisDigitalAcceleromter1_5g_Sample
             Console.WriteLine("Initializing");
 
             // create the sensor driver
-            var sensor = new ThreeAxisDigitalAccelerometer1_5g(Device.CreateI2cBus());
+            sensor = new ThreeAxisDigitalAccelerometer1_5g(Device.CreateI2cBus());
 
             // classical .NET events can also be used:
             sensor.Updated += (sender, result) => {
