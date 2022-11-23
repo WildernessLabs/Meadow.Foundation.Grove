@@ -181,7 +181,7 @@ jobs:
     - uses: ./.github/actions/build-package
       with:
         packageId: Meadow.Foundation.Grove.Sensors.Switches.SwitchP
-        path: Source/Switch(P)/Driver/Switch(P).csproj
+        path: Source/SwitchP/Driver/SwitchP.csproj
         version: ${{ env.version }}
         token: ${{ env.token }}
 
