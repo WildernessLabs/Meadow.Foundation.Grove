@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <OutputType>Library</OutputType>
-    <AssemblyName>Switch(P)</AssemblyName>
+    <AssemblyName>SwitchP</AssemblyName>
     <Company>Wilderness Labs, Inc</Company>
     <PackageProjectUrl>http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/</PackageProjectUrl>
     <PackageId>Meadow.Foundation.Grove.Sensors.Switches.SwitchP</PackageId>

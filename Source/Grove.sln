@@ -117,13 +117,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PIRMotionSensor_Sample", "P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PIRMotionSensor", "PIRMotionSensor\Driver\PIRMotionSensor.csproj", "{3EEBC099-B216-428E-A682-A11735DF5054}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Switch(P)", "Switch(P)", "{E55A9373-6A33-40FC-B834-542CFBB9C7B0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SwitchP", "SwitchP", "{E55A9373-6A33-40FC-B834-542CFBB9C7B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{2E4AE6FA-3C99-4A36-85FF-943746DB41A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Switch(P)", "Switch(P)\Driver\Switch(P).csproj", "{8950D452-1AA6-427E-92CF-40F0743A3328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchP", "SwitchP\Driver\SwitchP.csproj", "{8950D452-1AA6-427E-92CF-40F0743A3328}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Switch(P)_Sample", "Switch(P)\Sample\Switch(P)_Sample\Switch(P)_Sample.csproj", "{24CDAD4D-CE0C-4831-8E07-C1B395A50428}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchP_Sample", "SwitchP\Sample\SwitchP_Sample\SwitchP_Sample.csproj", "{24CDAD4D-CE0C-4831-8E07-C1B395A50428}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tilt", "Tilt", "{80E875F2-9F94-4B17-B7A7-AC4AF08C209B}"
 EndProject
