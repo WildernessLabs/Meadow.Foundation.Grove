@@ -18,7 +18,7 @@ namespace Grove.Buzzer_Sample
         {
             Console.WriteLine("Initialize...");
 
-            speaker = new Speaker(Device, Device.Pins.D13, new Frequency(440));
+            speaker = new Speaker(Device, Device.Pins.D13);
 
             return Task.CompletedTask;
         }
