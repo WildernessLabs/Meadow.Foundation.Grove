@@ -1,0 +1,243 @@
+name: Package Creation
+
+on:
+  workflow_dispatch:
+
+env:
+  version: '0.89.0'
+  token: ${{ secrets.NUGET_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set VERSION variable from env.version
+      run: echo "VERSION=${{ env.version }}" >> $GITHUB_ENV
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer_16g
+        path: Source/3-AxisDigitalAccelerometer16g/Driver/3-AxisDigitalAccelerometer16g.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer1_5g
+        path: Source/3-AxisDigitalAccelerometer1_5g/Driver/3-AxisDigitalAccelerometer1_5g.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass
+        path: Source/3-AxisDigitalCompass/Driver/3-AxisDigitalCompass.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Displays.4DigitDisplay
+        path: Source/4-DigitDisplay/Driver/4-DigitDisplay.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Buttons.Button
+        path: Source/Button/Driver/Button.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Audio.Buzzer
+        path: Source/Buzzer/Driver/Buzzer.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Environmental.FlameSensor
+        path: Source/FlameSensor/Driver/FlameSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Displays.LCD
+        path: Source/LCD/Driver/LCD.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Buttons.LEDButton
+        path: Source/LEDButton/Driver/LEDButton.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Leds.LEDSocket
+        path: Source/LEDSocket/Driver/LEDSocket.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Light.LightSensor
+        path: Source/LightSensor/Driver/LightSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Light.LineFinder
+        path: Source/LineFinder/Driver/LineFinder.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Sound.LoudnessSensor
+        path: Source/LoudnessSensor/Driver/LoudnessSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Switches.MagneticSwitch
+        path: Source/MagneticSwitch/Driver/MagneticSwitch.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Motion.MiniPIRMotionSensor
+        path: Source/MiniPIRMotionSensor/Driver/MiniPIRMotionSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Moisture.MoistureSensor
+        path: Source/MoistureSensor/Driver/MoistureSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Motion.PIRMotionSensor
+        path: Source/PIRMotionSensor/Driver/PIRMotionSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Relays.Relay
+        path: Source/Relay/Driver/Relay.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Rotary.RotaryAngleSensor
+        path: Source/RotaryAngleSensor/Driver/RotaryAngleSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.RTCs.RTC
+        path: Source/RTC/Driver/RTC.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Servos.Servo
+        path: Source/Servo/Driver/Servo.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Sound.SoundSensor
+        path: Source/SoundSensor/Driver/SoundSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Audio.Speaker
+        path: Source/Speaker/Driver/Speaker.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Switches.SwitchP
+        path: Source/Switch(P)/Driver/Switch(P).csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Atmospheric.TemperatureHumiditySensor_HighAccuracyMini
+        path: Source/TemperatureHumiditySensor_HighAccuracyMini/Driver/TemperatureHumiditySensor_HighAccuracyMini.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Temperature.TemperatureSensor
+        path: Source/TemperatureSensor/Driver/TemperatureSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Hid.ThumbJoystick
+        path: Source/ThumbJoystick/Driver/ThumbJoystick.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Switches.Tilt
+        path: Source/Tilt/Driver/Tilt.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Buttons.Touch
+        path: Source/Touch/Driver/Touch.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.HID.VibrationMotor
+        path: Source/VibrationMotor/Driver/VibrationMotor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Motion.VibrationSensor
+        path: Source/VibrationSensor/Driver/VibrationSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
+        packageId: Meadow.Foundation.Grove.Sensors.Environmental.WaterSensor
+        path: Source/WaterSensor/Driver/WaterSensor.csproj
+        version: ${{ env.version }}
+        token: ${{ env.token }}
+
