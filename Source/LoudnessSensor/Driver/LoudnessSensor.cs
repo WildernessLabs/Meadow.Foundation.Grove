@@ -8,7 +8,7 @@ namespace Meadow.Foundation.Grove.Sensors.Sound
     /// <summary>
     /// Represents a Loudness Sensor
     /// </summary>
-    public class LoudnessSensor : AnalogObservableBase
+    public class LoudnessSensor : AnalogSamplingBase
     {
         /// <summary>
         /// Creates a new LoudnessSensor driver

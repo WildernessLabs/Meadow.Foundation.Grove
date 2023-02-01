@@ -1,5 +1,4 @@
-﻿using Meadow.Devices;
-using Meadow.Foundation.Leds;
+﻿using Meadow.Foundation.Leds;
 using Meadow.Foundation.Sensors.Buttons;
 using Meadow.Hardware;
 
