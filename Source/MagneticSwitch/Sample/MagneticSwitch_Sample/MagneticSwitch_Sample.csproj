@@ -7,6 +7,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\Meadow.Core\Source\implementations\f7\Meadow.F7\Meadow.F7.csproj" />
-    <PackageReference Include="Meadow.Foundation.Grove.Sensors.Switches.MagneticSwitch" Version="0.*" />
+    <ProjectReference Include="..\..\Driver\MagneticSwitch.csproj" />
   </ItemGroup>
 </Project>

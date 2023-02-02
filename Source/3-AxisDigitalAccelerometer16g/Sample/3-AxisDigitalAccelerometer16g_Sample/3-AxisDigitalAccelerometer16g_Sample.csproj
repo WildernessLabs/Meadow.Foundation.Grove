@@ -9,6 +9,6 @@
     <ProjectReference Include="..\..\..\..\..\Meadow.Core\Source\implementations\f7\Meadow.F7\Meadow.F7.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalAccelerometer_16g" Version="0.*" />
+    <ProjectReference Include="..\..\Driver\3-AxisDigitalAccelerometer16g.csproj" />
   </ItemGroup>
 </Project>

@@ -13,6 +13,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\Meadow.Core\Source\implementations\f7\Meadow.F7\Meadow.F7.csproj" />
-    <PackageReference Include="Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass" Version="0.*" />
+    <ProjectReference Include="..\..\Driver\3-AxisDigitalCompass.csproj" />
   </ItemGroup>
 </Project>
