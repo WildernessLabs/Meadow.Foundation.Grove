@@ -279,6 +279,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sensors.Motion.ParallaxPir"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servos.ServoCore", "..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Servos.ServoCore\Driver\Servos.ServoCore.csproj", "{22C728F6-9927-4051-BFA5-08BD9F6FB3C7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meadow.F7", "..\..\Meadow.Core\source\implementations\f7\Meadow.F7\Meadow.F7.csproj", "{DD6C92AF-40B5-47C7-8EB7-02275C3B49F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sensors.Atmospheric.Th02", "..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Atmospheric.Th02\Driver\Sensors.Atmospheric.Th02.csproj", "{263E36E2-C856-485A-8125-0F3D014CC803}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -719,6 +723,18 @@ Global
 		{22C728F6-9927-4051-BFA5-08BD9F6FB3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22C728F6-9927-4051-BFA5-08BD9F6FB3C7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22C728F6-9927-4051-BFA5-08BD9F6FB3C7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DD6C92AF-40B5-47C7-8EB7-02275C3B49F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD6C92AF-40B5-47C7-8EB7-02275C3B49F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD6C92AF-40B5-47C7-8EB7-02275C3B49F4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DD6C92AF-40B5-47C7-8EB7-02275C3B49F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD6C92AF-40B5-47C7-8EB7-02275C3B49F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD6C92AF-40B5-47C7-8EB7-02275C3B49F4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{263E36E2-C856-485A-8125-0F3D014CC803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263E36E2-C856-485A-8125-0F3D014CC803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263E36E2-C856-485A-8125-0F3D014CC803}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{263E36E2-C856-485A-8125-0F3D014CC803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263E36E2-C856-485A-8125-0F3D014CC803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263E36E2-C856-485A-8125-0F3D014CC803}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -829,6 +845,8 @@ Global
 		{5E323CE3-987E-414E-989A-6276D4242856} = {669A65E7-D76B-48E4-98AE-DE7D33662054}
 		{1706729E-3586-434C-B51D-CDB0ECCFC0BC} = {669A65E7-D76B-48E4-98AE-DE7D33662054}
 		{22C728F6-9927-4051-BFA5-08BD9F6FB3C7} = {669A65E7-D76B-48E4-98AE-DE7D33662054}
+		{DD6C92AF-40B5-47C7-8EB7-02275C3B49F4} = {669A65E7-D76B-48E4-98AE-DE7D33662054}
+		{263E36E2-C856-485A-8125-0F3D014CC803} = {669A65E7-D76B-48E4-98AE-DE7D33662054}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {803C75D4-CF94-4881-BC4C-7CBE9D272949}
