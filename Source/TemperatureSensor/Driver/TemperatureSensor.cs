@@ -8,7 +8,7 @@ namespace Meadow.Foundation.Grove.Sensors.Temperature
     /// <summary>
     /// Represents a Temperature Sensor
     /// </summary>
-    public class TemperatureSensor : AnalogObservableBase
+    public class TemperatureSensor : AnalogSamplingBase
     {
         /// <summary>
         /// Creates a new TemperatureSensor driver

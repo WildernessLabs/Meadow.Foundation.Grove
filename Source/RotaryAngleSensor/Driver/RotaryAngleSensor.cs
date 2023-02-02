@@ -8,7 +8,7 @@ namespace Meadow.Foundation.Grove.Sensors.Rotary
     /// <summary>
     /// Represents a rotary angle sensor
     /// </summary>
-    public class RotaryAngleSensor : AnalogObservableBase
+    public class RotaryAngleSensor : AnalogSamplingBase
     {
         /// <summary>
         /// Creates a new RotaryAngleSensor driver

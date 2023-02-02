@@ -1,6 +1,7 @@
 ﻿using Meadow.Hardware;
 using Meadow.Peripherals.Switches;
 using System;
+using System.Threading.Tasks;
 
 namespace Meadow.Foundation.Grove.Sensors.Switches
 {
@@ -52,6 +53,15 @@ namespace Meadow.Foundation.Grove.Sensors.Switches
         private void SignalPortChanged(object sender, DigitalPortResult e)
         {
             Changed?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// Returns the state of the switch
+        /// </summary>
+        /// <returns></returns>
+        public Task<bool> Read()
+        {
+            return Task.FromResult(IsOn);
         }
     }
 }

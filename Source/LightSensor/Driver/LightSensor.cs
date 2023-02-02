@@ -8,7 +8,7 @@ namespace Meadow.Foundation.Grove.Sensors.Light
     /// <summary>
     /// Represents a Light Sensor
     /// </summary>
-    public class LightSensor : AnalogObservableBase
+    public class LightSensor : AnalogSamplingBase
     {
         /// <summary>
         /// Creates a new LightSensor driver

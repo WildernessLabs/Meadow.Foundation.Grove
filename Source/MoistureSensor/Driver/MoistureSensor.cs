@@ -8,7 +8,7 @@ namespace Meadow.Foundation.Grove.Sensors.Moisture
     /// <summary>
     /// Represents a Moisture Sensor
     /// </summary>
-    public class MoistureSensor : AnalogObservableBase
+    public class MoistureSensor : AnalogSamplingBase
     {
         /// <summary>
         /// Creates a new MoistureSensor driver
