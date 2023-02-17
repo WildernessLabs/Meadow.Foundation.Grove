@@ -35,10 +35,9 @@ namespace Meadow.Foundation.Grove.HID
         /// <summary>
         /// Creates a VibrationMotor driver
         /// </summary>
-        /// <param name="device"></param>
         /// <param name="pin"></param>
-        public VibrationMotor(IDigitalOutputController device, IPin pin) 
-            : this(device.CreateDigitalOutputPort(pin, false))
+        public VibrationMotor(IPin pin) 
+            : this(pin.CreateDigitalOutputPort(false))
         { }
     }
 }

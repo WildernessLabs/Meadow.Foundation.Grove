@@ -15,7 +15,7 @@ namespace Grove.LineFinder_Sample
         {
             Console.WriteLine("Initialize...");
 
-            var lineFinder = new LineFinder(Device, Device.Pins.D13);
+            var lineFinder = new LineFinder(Device.Pins.D13);
 
             lineFinder.ColorChanged += (s, e) =>
             {

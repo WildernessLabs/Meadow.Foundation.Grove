@@ -34,18 +34,15 @@ namespace Meadow.Foundation.Grove.Sensors.Buttons
         /// <summary>
         /// Creates an LEDButton driver
         /// </summary>
-        /// <param name="device"></param>
         /// <param name="buttonPin"></param>
         /// <param name="ledPin"></param>
         /// <param name="resistorMode"></param>
-        public LEDButton(
-            IMeadowDevice device, 
-            IPin buttonPin, 
+        public LEDButton(IPin buttonPin, 
             IPin ledPin, 
             ResistorMode resistorMode = ResistorMode.InternalPullUp)
-            : base(device, buttonPin, resistorMode)
+            : base(buttonPin, resistorMode)
         {
-            led = new Led(device, ledPin);
+            led = new Led(ledPin);
         }
     }
 }

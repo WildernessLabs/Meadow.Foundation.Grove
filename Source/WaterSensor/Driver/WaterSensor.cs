@@ -6,12 +6,12 @@ namespace Meadow.Foundation.Grove.Sensors.Environmental
 {
     public class WaterSensor : AnalogWaterLevel
     {
-        public WaterSensor(IAnalogInputPort analogInputPort, Calibration calibration = null) : base(analogInputPort, calibration)
-        {
-        }
+        public WaterSensor(IAnalogInputPort analogInputPort, Calibration calibration = null)
+            : base(analogInputPort, calibration)
+        { }
 
-        public WaterSensor(IAnalogInputController device, IPin analogPin, Calibration calibration = null, TimeSpan? updateInterval = null) : base(device, analogPin, calibration, updateInterval)
-        {
-        }
+        public WaterSensor(IPin analogPin, Calibration calibration = null, TimeSpan? updateInterval = null) 
+            : base(analogPin, calibration, updateInterval)
+        { }
     }
 }

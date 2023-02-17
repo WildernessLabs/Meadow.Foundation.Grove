@@ -15,7 +15,7 @@ namespace Grove.FlameSensor_Sample
         {
             Console.WriteLine("Initialize...");
 
-            var magneticSwitch = new MagneticSwitch(Device, Device.Pins.D13);
+            var magneticSwitch = new MagneticSwitch(Device.Pins.D13);
 
             magneticSwitch.Changed += (s, e) =>
             {

@@ -25,14 +25,10 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
         /// <summary>
         /// Creates a VibrationSensor driver
         /// </summary>
-        /// <param name="device"></param>
         /// <param name="inputPin"></param>
-        public VibrationSensor(
-            IDigitalInputController device, 
-            IPin inputPin) 
+        public VibrationSensor(IPin inputPin) 
             : this(
-                device.CreateDigitalInputPort(
-                    inputPin, 
+                inputPin.CreateDigitalInputPort(
                     InterruptMode.EdgeRising, 
                     ResistorMode.InternalPullUp,
                     TimeSpan.Zero,

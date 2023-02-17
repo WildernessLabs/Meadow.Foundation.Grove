@@ -11,15 +11,9 @@ namespace Meadow.Foundation.Grove.Sensors.Buttons
         /// <summary>
         /// Creates a Touch button driver
         /// </summary>
-        /// <param name="device"></param>
         /// <param name="inputPin"></param>
-        public Touch(
-            IDigitalInputController device, 
-            IPin inputPin)
-            : base(
-                  device, 
-                  inputPin, 
-                  ResistorMode.InternalPullDown)
+        public Touch(IPin inputPin)
+            : base(inputPin, ResistorMode.InternalPullDown)
         { }
     }
 }

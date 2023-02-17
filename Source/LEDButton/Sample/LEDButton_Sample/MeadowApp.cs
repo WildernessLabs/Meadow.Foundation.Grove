@@ -17,10 +17,7 @@ namespace Grove.LEDButton_Sample
         {
             Console.WriteLine("Initialize...");
 
-            ledButton = new LEDButton(
-                device: Device, 
-                buttonPin: Device.Pins.D12, 
-                ledPin: Device.Pins.D13);
+            ledButton = new LEDButton(buttonPin: Device.Pins.D12, ledPin: Device.Pins.D13);
 
             ledButton.LongClickedThreshold = TimeSpan.FromMilliseconds(1500);
 
