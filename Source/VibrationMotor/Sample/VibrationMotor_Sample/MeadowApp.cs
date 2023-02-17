@@ -17,7 +17,7 @@ namespace Grove.VibrationMotor_Sample
         {
             Console.WriteLine("Initialize...");
 
-            vibrationMotor = new VibrationMotor(Device, Device.Pins.D13);
+            vibrationMotor = new VibrationMotor(Device.Pins.D13);
 
             return Task.CompletedTask;
         }

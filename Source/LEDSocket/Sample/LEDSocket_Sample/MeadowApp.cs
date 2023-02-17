@@ -17,7 +17,7 @@ namespace Grove.LEDSocket_Sample
         {
             Console.WriteLine("Initialize...");
 
-            led = new LEDSocket(Device, Device.Pins.D13);
+            led = new LEDSocket(Device.Pins.D13);
 
             return Task.CompletedTask;
         }

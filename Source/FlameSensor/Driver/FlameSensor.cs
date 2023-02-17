@@ -25,14 +25,9 @@ namespace Meadow.Foundation.Grove.Sensors.Environmental
         /// <summary>
         /// Creates a Flame Sensor driver
         /// </summary>
-        /// <param name="device"></param>
         /// <param name="inputPin"></param>
-        public FlameSensor(
-            IDigitalInputController device, 
-            IPin inputPin) 
-            : this(
-                  device.CreateDigitalInputPort(
-                      inputPin, 
+        public FlameSensor(IPin inputPin) 
+            : this(inputPin.CreateDigitalInputPort(
                       InterruptMode.EdgeBoth, 
                       ResistorMode.InternalPullUp, 
                       TimeSpan.Zero, 

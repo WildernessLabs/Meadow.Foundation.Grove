@@ -17,7 +17,7 @@ namespace MoistureSensor_Sample
         {
             Console.WriteLine("Initialize...");
 
-            sensor = new MoistureSensor(Device, Device.Pins.A01);
+            sensor = new MoistureSensor(Device.Pins.A01);
 
             var consumer = MoistureSensor.CreateObserver(
                 handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),

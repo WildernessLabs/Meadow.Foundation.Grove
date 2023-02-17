@@ -19,10 +19,9 @@ namespace Meadow.Foundation.Grove.Leds
         /// <summary>
         /// Creates an LEDSocker driver 
         /// </summary>
-        /// <param name="device"></param>
         /// <param name="pin"></param>
-        public LEDSocket(IDigitalOutputController device, IPin pin)
-            : base(device, pin)
+        public LEDSocket(IPin pin)
+            : base(pin)
         { }
     }
 }

@@ -17,7 +17,7 @@ namespace Grove.WaterSensor_Sample
         {
             Console.WriteLine("Initialize...");
 
-            waterSensor = new WaterSensor(Device, Device.Pins.A01);
+            waterSensor = new WaterSensor(Device.Pins.A01);
 
             waterSensor.Subscribe(WaterSensor.CreateObserver(
                 h => Console.WriteLine($"Water level changed by 10 mm; new: {h.New}, old: {h.Old}"),

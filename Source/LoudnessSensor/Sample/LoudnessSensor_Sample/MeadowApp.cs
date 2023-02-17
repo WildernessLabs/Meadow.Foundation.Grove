@@ -17,7 +17,7 @@ namespace LoudnessSensor_Sample
         {
             Console.WriteLine("Initialize...");
 
-            sensor = new LoudnessSensor(Device, Device.Pins.A01);
+            sensor = new LoudnessSensor(Device.Pins.A01);
 
             var consumer = LoudnessSensor.CreateObserver(
                 handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),

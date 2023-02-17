@@ -14,8 +14,8 @@ namespace Meadow.Foundation.Grove.Sensors.Sound
         /// Creates a new SoundSensor driver
         /// </summary>
         /// <param name="pin">AnalogChannel connected to the sensor.</param>
-        public SoundSensor(IAnalogInputController device, IPin pin, int sampleCount = 5, TimeSpan? sampleInterval = null, Voltage? voltage = null)
-            : this(device.CreateAnalogInputPort(pin, sampleCount, sampleInterval ?? TimeSpan.FromMilliseconds(40), voltage ?? new Voltage(3.3)))
+        public SoundSensor(IPin pin, int sampleCount = 5, TimeSpan? sampleInterval = null, Voltage? voltage = null)
+            : this(pin.CreateAnalogInputPort(sampleCount, sampleInterval ?? TimeSpan.FromMilliseconds(40), voltage ?? new Voltage(3.3)))
         { }
 
         /// <summary>

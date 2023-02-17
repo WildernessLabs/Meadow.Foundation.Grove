@@ -17,7 +17,7 @@ namespace Grove.Button_Sample
         {
             Console.WriteLine("Initialize...");
 
-            button = new Button(Device, Device.Pins.D13)
+            button = new Button(Device.Pins.D13)
             {
                 LongClickedThreshold = TimeSpan.FromMilliseconds(1500)
             };

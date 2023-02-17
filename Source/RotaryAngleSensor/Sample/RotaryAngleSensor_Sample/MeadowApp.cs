@@ -17,7 +17,7 @@ namespace RotaryAngleSensor_Sample
         {
             Console.WriteLine("Initialize...");
 
-            sensor = new RotaryAngleSensor(Device, Device.Pins.A01);
+            sensor = new RotaryAngleSensor(Device.Pins.A01);
 
             var consumer = RotaryAngleSensor.CreateObserver(
                 handler: result => Console.WriteLine($"Observer filter satisfied: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV"),

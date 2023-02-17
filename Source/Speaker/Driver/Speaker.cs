@@ -22,16 +22,9 @@ namespace Meadow.Foundation.Grove.Audio
         /// <summary>
         /// Creates a Speaker driver
         /// </summary>
-        /// <param name="device">The Pwm controller connected to the buzzer (typically Meadow)</param>
         /// <param name="pin">The pin connected to the buzzer/param>
-        public Speaker(
-            IPwmOutputController device, 
-            IPin pin)
-            : base(
-                device, 
-                pin, 
-                new Frequency(440), 
-                0f)
+        public Speaker(IPin pin)
+            : base(pin, new Frequency(440), 0f)
         { }
     }
 }
