@@ -36,14 +36,9 @@ namespace Meadow.Foundation.Grove.Sensors.Switches
         /// <summary>
         /// Creates a MagneticSwitch driver
         /// </summary>
-        /// <param name="device"></param>
         /// <param name="inputPin"></param>
-        public MagneticSwitch(
-            IDigitalInputController device, 
-            IPin inputPin)
-            : this(
-                device.CreateDigitalInputPort(
-                    inputPin, 
+        public MagneticSwitch(IPin inputPin)
+            : this(inputPin.CreateDigitalInputPort(
                     InterruptMode.EdgeBoth, 
                     ResistorMode.InternalPullUp,
                     TimeSpan.Zero,

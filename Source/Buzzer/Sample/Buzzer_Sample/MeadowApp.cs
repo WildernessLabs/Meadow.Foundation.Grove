@@ -18,7 +18,7 @@ namespace Grove.Buzzer_Sample
         {
             Console.WriteLine("Initialize...");
 
-            buzzer = new Buzzer(Device, Device.Pins.D13);
+            buzzer = new Buzzer(Device.Pins.D13);
 
             return Task.CompletedTask;
         }

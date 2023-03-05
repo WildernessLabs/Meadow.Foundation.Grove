@@ -12,14 +12,9 @@ namespace Meadow.Foundation.Grove.Sensors.Switches
         /// <summary>
         /// Creates a SwitchP driver
         /// </summary>
-        /// <param name="device"></param>
         /// <param name="pin"></param>
-        public SwitchP(
-            IDigitalInputController device, 
-            IPin pin) 
-            : base(
-                device, 
-                pin, 
+        public SwitchP(IPin pin) 
+            : base(pin, 
                 InterruptMode.EdgeBoth, 
                 ResistorMode.InternalPullDown,
                 TimeSpan.FromMilliseconds(20),

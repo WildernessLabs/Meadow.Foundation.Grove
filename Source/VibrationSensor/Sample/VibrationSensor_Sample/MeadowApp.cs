@@ -17,7 +17,7 @@ namespace Grove.VibrationSensor_Sample
         {
             Console.WriteLine("Initialize...");
 
-            sensor = new VibrationSensor(Device, Device.Pins.D13);
+            sensor = new VibrationSensor(Device.Pins.D13);
 
             sensor.VibrationDetected += (s, e) =>
             {

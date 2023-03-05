@@ -17,7 +17,7 @@ namespace TemperatureSensor_Sample
         {
             Console.WriteLine("Initialize...");
 
-            sensor = new TemperatureSensor(Device, Device.Pins.A01);
+            sensor = new TemperatureSensor(Device.Pins.A01);
 
             var consumer = TemperatureSensor.CreateObserver(
                 handler: result => 

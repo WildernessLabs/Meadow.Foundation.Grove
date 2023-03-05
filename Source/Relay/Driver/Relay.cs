@@ -18,10 +18,9 @@ namespace Meadow.Foundation.Grove.Relays
         /// <summary>
         /// Creates a new Relay driver
         /// </summary>
-        /// <param name="device"></param>
         /// <param name="pin"></param>
-        public Relay(IDigitalOutputController device, IPin pin) 
-            : base(device, pin)
+        public Relay(IPin pin) 
+            : base(pin)
         { }
     }
 }

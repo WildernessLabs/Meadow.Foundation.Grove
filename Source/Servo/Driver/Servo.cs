@@ -19,10 +19,9 @@ namespace Meadow.Foundation.Grove.Servos
         /// <summary>
         /// Creates a Servo driver
         /// </summary>
-        /// <param name="device"></param>
-        /// <param name="pwm"></param>
-        public Servo(IPwmOutputController device, IPin pwm)
-            : base(device, pwm, NamedServoConfigs.SG90)
+        /// <param name="pwmPin"></param>
+        public Servo(IPin pwmPin)
+            : base(pwmPin, NamedServoConfigs.SG90)
         { }
     }
 }
