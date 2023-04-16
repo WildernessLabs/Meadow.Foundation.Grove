@@ -31,7 +31,7 @@ namespace Meadow.Foundation.Grove.Displays
         /// Creates a Grove OLEDDisplay1_12inch display object
         /// </summary>
         /// <param name="i2cBus">The I2C bus connected to the display</param>
-        /// <param name="displayType">The I2C address</param>
+        /// <param name="displayType">The display version</param>
         public OLEDDisplay1_12inch(II2cBus i2cBus,
             OLEDDisplayVersion displayType)
             : base(i2cBus, (byte)Sh110x.Addresses.Address_0x3C, 128, 128)
