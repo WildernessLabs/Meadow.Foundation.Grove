@@ -132,6 +132,13 @@ jobs:
 
     - uses: ./.github/actions/build-package
       with:
+        packageId: Meadow.Foundation.Grove.Displays.OLEDDisplay112
+        path: Source/OLEDDisplay1_12inch/Driver/OLEDDisplay1_12inch.csproj
+        version: ${VERSION}
+        token: ${{ env.token }}
+
+    - uses: ./.github/actions/build-package
+      with:
         packageId: Meadow.Foundation.Grove.Sensors.Motion.PIRMotionSensor
         path: Source/PIRMotionSensor/Driver/PIRMotionSensor.csproj
         version: ${VERSION}
