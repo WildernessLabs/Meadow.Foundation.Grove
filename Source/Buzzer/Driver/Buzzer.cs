@@ -20,7 +20,7 @@ namespace Meadow.Foundation.Grove.Audio
         /// <summary>
         /// Creates a new Buzzer driver
         /// </summary>
-        /// <param name="pin">The pin connected to the buzzer/param>
+        /// <param name="pin">The pin connected to the buzzer</param>
         public Buzzer(
             IPin pin)
             : base(pin, new Frequency(440))
