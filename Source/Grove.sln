@@ -295,6 +295,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Displays.Sh110x", "..\..\Me
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Displays.Ssd1327", "..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Displays.Ssd1327\Driver\Displays.Ssd1327.csproj", "{A31E226E-6A1E-491B-8737-6A34AEE98CDF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphics.MicroGraphics", "..\..\Meadow.Foundation\Source\Meadow.Foundation.Libraries_and_Frameworks\Graphics.MicroGraphics\Driver\Graphics.MicroGraphics.csproj", "{01AFF537-F6DE-4119-A3FC-C681528CEE0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -771,6 +773,12 @@ Global
 		{A31E226E-6A1E-491B-8737-6A34AEE98CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A31E226E-6A1E-491B-8737-6A34AEE98CDF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A31E226E-6A1E-491B-8737-6A34AEE98CDF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{01AFF537-F6DE-4119-A3FC-C681528CEE0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AFF537-F6DE-4119-A3FC-C681528CEE0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AFF537-F6DE-4119-A3FC-C681528CEE0B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{01AFF537-F6DE-4119-A3FC-C681528CEE0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AFF537-F6DE-4119-A3FC-C681528CEE0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01AFF537-F6DE-4119-A3FC-C681528CEE0B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -888,6 +896,7 @@ Global
 		{6E5F9572-4A9E-434A-8FBA-F666A1BFD3FD} = {42494A24-65BE-4484-B7A2-B8C7065F8DB0}
 		{8DFB77FA-2DA0-47DD-BF93-E3EFDA393E36} = {669A65E7-D76B-48E4-98AE-DE7D33662054}
 		{A31E226E-6A1E-491B-8737-6A34AEE98CDF} = {669A65E7-D76B-48E4-98AE-DE7D33662054}
+		{01AFF537-F6DE-4119-A3FC-C681528CEE0B} = {669A65E7-D76B-48E4-98AE-DE7D33662054}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {803C75D4-CF94-4881-BC4C-7CBE9D272949}
