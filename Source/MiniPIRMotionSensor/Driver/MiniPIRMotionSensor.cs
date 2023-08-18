@@ -12,9 +12,9 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
         /// <summary>
         /// Creates a MiniPIRMotionSensor driver
         /// </summary>
-        /// <param name="digitalInputPort">The port connected to the PIR</param>
-        public MiniPIRMotionSensor(IDigitalInputPort digitalInputPort)
-            : base(digitalInputPort)
+        /// <param name="digitalInterruptPort">The port connected to the PIR</param>
+        public MiniPIRMotionSensor(IDigitalInterruptPort digitalInterruptPort)
+            : base(digitalInterruptPort)
         { }
 
         /// <summary>
@@ -27,14 +27,14 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
         /// <param name="glitchDuration">The glitch duration (can typically be set to zero)</param>
         public MiniPIRMotionSensor(
             IPin pin,
-            InterruptMode interruptMode, 
-            ResistorMode resistorMode, 
+            InterruptMode interruptMode,
+            ResistorMode resistorMode,
             TimeSpan debounceDuration,
-            TimeSpan glitchDuration) 
-            : base(pin, 
-                  interruptMode, 
-                  resistorMode, 
-                  debounceDuration, 
+            TimeSpan glitchDuration)
+            : base(pin,
+                  interruptMode,
+                  resistorMode,
+                  debounceDuration,
                   glitchDuration)
         { }
     }

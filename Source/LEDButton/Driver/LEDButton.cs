@@ -25,10 +25,10 @@ namespace Meadow.Foundation.Grove.Sensors.Buttons
         /// </summary>
         /// <param name="buttonPort"></param>
         /// <param name="ledPort"></param>
-        public LEDButton(IDigitalInputPort buttonPort, IDigitalOutputPort ledPort) 
+        public LEDButton(IDigitalInterruptPort buttonPort, IDigitalOutputPort ledPort)
             : base(buttonPort)
         {
-            led = new Led(ledPort); 
+            led = new Led(ledPort);
         }
 
         /// <summary>
@@ -37,8 +37,8 @@ namespace Meadow.Foundation.Grove.Sensors.Buttons
         /// <param name="buttonPin"></param>
         /// <param name="ledPin"></param>
         /// <param name="resistorMode"></param>
-        public LEDButton(IPin buttonPin, 
-            IPin ledPin, 
+        public LEDButton(IPin buttonPin,
+            IPin ledPin,
             ResistorMode resistorMode = ResistorMode.InternalPullUp)
             : base(buttonPin, resistorMode)
         {

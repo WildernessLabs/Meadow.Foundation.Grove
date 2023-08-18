@@ -12,7 +12,7 @@ namespace Meadow.Foundation.Grove.Sensors.Buttons
         /// Creates a new Button driver
         /// </summary>
         /// <param name="interruptPort"></param>
-        public Button(IDigitalInputPort interruptPort) 
+        public Button(IDigitalInterruptPort interruptPort)
             : base(interruptPort)
         { }
 
@@ -22,8 +22,8 @@ namespace Meadow.Foundation.Grove.Sensors.Buttons
         /// <param name="inputPin"></param>
         /// <param name="resistorMode"></param>
         public Button(
-            IPin inputPin, 
-            ResistorMode resistorMode = ResistorMode.InternalPullUp) 
+            IPin inputPin,
+            ResistorMode resistorMode = ResistorMode.InternalPullUp)
             : base(inputPin, resistorMode)
         { }
     }
