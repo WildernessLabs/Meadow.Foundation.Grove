@@ -6,7 +6,7 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
     /// <summary>
     /// Represents a Vibration Sensor
     /// </summary>
-    public class VibrationSensor 
+    public class VibrationSensor
     {
         /// <summary>
         /// Event triggered when vibration is detected
@@ -17,7 +17,7 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
         /// Creates a VibrationSensor driver
         /// </summary>
         /// <param name="signalPort"></param>
-        public VibrationSensor(IDigitalInputPort signalPort)
+        public VibrationSensor(IDigitalInterruptPort signalPort)
         {
             signalPort.Changed += SignalPortChanged;
         }
@@ -26,10 +26,10 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
         /// Creates a VibrationSensor driver
         /// </summary>
         /// <param name="inputPin"></param>
-        public VibrationSensor(IPin inputPin) 
+        public VibrationSensor(IPin inputPin)
             : this(
-                inputPin.CreateDigitalInputPort(
-                    InterruptMode.EdgeRising, 
+                inputPin.CreateDigitalInterruptPort(
+                    InterruptMode.EdgeRising,
                     ResistorMode.InternalPullUp,
                     TimeSpan.Zero,
                     TimeSpan.FromMilliseconds(25)))

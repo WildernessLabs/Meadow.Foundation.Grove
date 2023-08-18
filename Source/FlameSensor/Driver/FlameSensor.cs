@@ -6,7 +6,7 @@ namespace Meadow.Foundation.Grove.Sensors.Environmental
     /// <summary>
     /// Represents a Flame Proximity Sensor
     /// </summary>
-    public class FlameSensor 
+    public class FlameSensor
     {
         /// <summary>
         /// Event triggered when flame source is detected
@@ -17,7 +17,7 @@ namespace Meadow.Foundation.Grove.Sensors.Environmental
         /// Creates a Flame Sensor driver
         /// </summary>
         /// <param name="signalPort"></param>
-        public FlameSensor(IDigitalInputPort signalPort)
+        public FlameSensor(IDigitalInterruptPort signalPort)
         {
             signalPort.Changed += SignalPortChanged;
         }
@@ -26,11 +26,11 @@ namespace Meadow.Foundation.Grove.Sensors.Environmental
         /// Creates a Flame Sensor driver
         /// </summary>
         /// <param name="inputPin"></param>
-        public FlameSensor(IPin inputPin) 
-            : this(inputPin.CreateDigitalInputPort(
-                      InterruptMode.EdgeBoth, 
-                      ResistorMode.InternalPullUp, 
-                      TimeSpan.Zero, 
+        public FlameSensor(IPin inputPin)
+            : this(inputPin.CreateDigitalInterruptPort(
+                      InterruptMode.EdgeBoth,
+                      ResistorMode.InternalPullUp,
+                      TimeSpan.Zero,
                       TimeSpan.FromMilliseconds(25)))
         { }
 

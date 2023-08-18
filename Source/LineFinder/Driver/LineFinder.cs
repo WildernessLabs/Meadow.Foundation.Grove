@@ -6,7 +6,7 @@ namespace Meadow.Foundation.Grove.Sensors.Light
     /// <summary>
     /// Represents a line finder sensor
     /// </summary>
-    public class LineFinder 
+    public class LineFinder
     {
         IDigitalInputPort inputPort;
 
@@ -29,7 +29,7 @@ namespace Meadow.Foundation.Grove.Sensors.Light
         /// Creates a new LineFinder driver
         /// </summary>
         /// <param name="signalPort"></param>
-        public LineFinder(IDigitalInputPort signalPort)
+        public LineFinder(IDigitalInterruptPort signalPort)
         {
             inputPort = signalPort;
             signalPort.Changed += SignalPortChanged;
@@ -39,9 +39,9 @@ namespace Meadow.Foundation.Grove.Sensors.Light
         /// Creates a new LineFinder driver
         /// </summary>
         /// <param name="inputPin"></param>
-        public LineFinder(IPin inputPin) 
-            : this(inputPin.CreateDigitalInputPort(
-                   InterruptMode.EdgeBoth, 
+        public LineFinder(IPin inputPin)
+            : this(inputPin.CreateDigitalInterruptPort(
+                   InterruptMode.EdgeBoth,
                    ResistorMode.InternalPullUp,
                    TimeSpan.Zero,
                    TimeSpan.FromMilliseconds(25)))
@@ -49,7 +49,7 @@ namespace Meadow.Foundation.Grove.Sensors.Light
 
         void SignalPortChanged(object sender, DigitalPortResult e)
         {
-            ColorChanged?.Invoke(this, e.New.State? LineColor.Black : LineColor.White);
+            ColorChanged?.Invoke(this, e.New.State ? LineColor.Black : LineColor.White);
         }
     }
 }
