@@ -12,9 +12,9 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
         /// <summary>
         /// Creates a PIRMotionSensor driver
         /// </summary>
-        /// <param name="digitalInputPort"></param>
-        public PIRMotionSensor(IDigitalInputPort digitalInputPort)
-            : base(digitalInputPort)
+        /// <param name="digitalInterruptPort"></param>
+        public PIRMotionSensor(IDigitalInterruptPort digitalInterruptPort)
+            : base(digitalInterruptPort)
         { }
 
         /// <summary>
@@ -26,15 +26,15 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
         /// <param name="debounceDuration">The debounce duration</param>
         /// <param name="glitchDuration">The glitch duration (can typically be set to zero)</param>
         public PIRMotionSensor(
-            IPin pin, 
-            InterruptMode interruptMode, 
-            ResistorMode resistorMode, 
-            TimeSpan debounceDuration, 
-            TimeSpan glitchDuration) 
-            : base(pin, 
-                  interruptMode, 
-                  resistorMode, 
-                  debounceDuration, 
+            IPin pin,
+            InterruptMode interruptMode,
+            ResistorMode resistorMode,
+            TimeSpan debounceDuration,
+            TimeSpan glitchDuration)
+            : base(pin,
+                  interruptMode,
+                  resistorMode,
+                  debounceDuration,
                   glitchDuration)
         { }
     }
