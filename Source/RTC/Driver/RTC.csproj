@@ -23,6 +23,6 @@
   <ItemGroup>
     <None Include=".\Readme.md" Pack="true" PackagePath=""/>
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
-    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\RTCs.Ds1307\Driver\RTCs.Ds1307.csproj" />
+    <PackageReference Include="Meadow.Foundation.RTCs.Ds1307" Version="*" />
   </ItemGroup>
 </Project>
