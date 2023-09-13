@@ -8,3 +8,36 @@ The **Meadow.Foundation** peripherals library is an open-source repository of dr
 
 For more information on developing for Meadow, visit [developer.wildernesslabs.co](http://developer.wildernesslabs.co/), to view all Wilderness Labs open-source projects, including samples, visit [github.com/wildernesslabs](https://github.com/wildernesslabs/)
 
+## Usage
+
+```
+FourDigitDisplay display;
+
+public override Task Initialize()
+{
+    Console.WriteLine("Initializing ...");
+
+    display = new FourDigitDisplay(
+        device: Device, 
+        pinClock: Device.Pins.D02,
+        pinData: Device.Pins.D01) 
+    { 
+        Brightness = 7,
+        ScreenOn = true
+    };
+
+    return Task.CompletedTask;
+}
+
+public override Task Run()
+{
+    display.Clear();
+
+    var chars = new Character[] { Character.A, Character.B, Character.C, Character.D };
+
+    display.Show(chars);
+
+    return Task.CompletedTask;
+}
+
+```
