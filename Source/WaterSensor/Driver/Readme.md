@@ -6,7 +6,7 @@ The **WaterSensor** library is designed for the [Wilderness Labs](www.wilderness
 
 The **Meadow.Foundation** peripherals library is an open-source repository of drivers and libraries that streamline and simplify adding hardware to your C# .NET Meadow IoT application.
 
-For more information on developing for Meadow, visit [developer.wildernesslabs.co](http://developer.wildernesslabs.co/), to view all of Wilderness Labs open-source projects, including samples, visit [github.com/wildernesslabs](https://github.com/wildernesslabs/)
+For more information on developing for Meadow, visit [developer.wildernesslabs.co](http://developer.wildernesslabs.co/), to view all Wilderness Labs open-source projects, including samples, visit [github.com/wildernesslabs](https://github.com/wildernesslabs/)
 
 ## Usage
 
@@ -40,6 +40,4 @@ public override async Task Run()
     waterSensor.StartUpdating(TimeSpan.FromSeconds(5));
 }
 
-        
 ```
-
