@@ -13,9 +13,9 @@ namespace Meadow.Foundation.Grove.Sensors.Switches
         /// Creates a Tilt driver
         /// </summary>
         /// <param name="pin"></param>
-        public Tilt(IPin pin) 
-            : base(pin, 
-                  InterruptMode.EdgeBoth, 
+        public Tilt(IPin pin)
+            : base(pin,
+                  InterruptMode.EdgeBoth,
                   ResistorMode.InternalPullDown,
                   TimeSpan.FromMilliseconds(50),
                   TimeSpan.FromMilliseconds(2))

@@ -10,7 +10,7 @@ namespace Meadow.Foundation.Grove.Sensors.Switches
     /// </summary>
     public class MagneticSwitch : ISwitch
     {
-        IDigitalInputPort port;
+        readonly IDigitalInputPort port;
 
         /// <summary>
         /// Returns the state of the switch

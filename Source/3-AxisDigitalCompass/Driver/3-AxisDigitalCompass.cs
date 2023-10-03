@@ -25,13 +25,13 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
             DataOutputRates outputRate = DataOutputRates.Rate15,
             SampleAmounts samplesAmount = SampleAmounts.One,
             MeasurementConfigurations measurementConfig = MeasurementConfigurations.Normal)
-            : base (
-                  i2cBus, 
-                  address, 
-                  gain, 
-                  measuringMode, 
-                  outputRate, 
-                  samplesAmount, 
+            : base(
+                  i2cBus,
+                  address,
+                  gain,
+                  measuringMode,
+                  outputRate,
+                  samplesAmount,
                   measurementConfig)
         { }
     }

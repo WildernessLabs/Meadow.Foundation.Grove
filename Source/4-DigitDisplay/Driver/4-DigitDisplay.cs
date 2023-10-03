@@ -14,7 +14,7 @@ namespace Meadow.Foundation.Grove.Displays
         /// <param name="device"></param>
         /// <param name="pinClock"></param>
         /// <param name="pinData"></param>
-        public FourDigitDisplay(IMeadowDevice device, IPin pinClock, IPin pinData) 
+        public FourDigitDisplay(IMeadowDevice device, IPin pinClock, IPin pinData)
             : base(device, pinClock, pinData)
         { }
     }

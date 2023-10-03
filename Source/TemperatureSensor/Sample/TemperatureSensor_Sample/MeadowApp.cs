@@ -20,11 +20,11 @@ namespace TemperatureSensor_Sample
             sensor = new TemperatureSensor(Device.Pins.A01);
 
             var consumer = TemperatureSensor.CreateObserver(
-                handler: result => 
-                { 
+                handler: result =>
+                {
                     Console.WriteLine($"Observer filter satisfied - " +
                         $"new: {result.New.Millivolts:N2}mV, " +
-                        $"old: {result.Old?.Millivolts:N2}mV"); 
+                        $"old: {result.Old?.Millivolts:N2}mV");
                 },
                 filter: result =>
                 {

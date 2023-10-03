@@ -21,7 +21,8 @@ namespace Grove.ThreeAxisDigitalCompass_Sample
 
             sensor = new ThreeAxisDigitalCompass(Device.CreateI2cBus());
 
-            sensor.Updated += (sender, result) => {
+            sensor.Updated += (sender, result) =>
+            {
                 Console.WriteLine($"Direction: [X:{result.New.X:N2}," +
                     $"Y:{result.New.Y:N2}," +
                     $"Z:{result.New.Z:N2}]");
@@ -36,7 +37,8 @@ namespace Grove.ThreeAxisDigitalCompass_Sample
                         $"new [x]: X:{Hmc5883.DirectionToHeading(result.New):N2}, " +
                         $"old: X:{((result.Old != null) ? Hmc5883.DirectionToHeading(result.Old.Value) : "n/a"):N2} degrees");
                 },
-                filter: result => {
+                filter: result =>
+                {
                     if (result.Old is { } old)
                     { //c# 8 pattern match syntax. checks for !null and assigns var.
                         return (Hmc5883.DirectionToHeading(result.New - old) > new Azimuth(5));

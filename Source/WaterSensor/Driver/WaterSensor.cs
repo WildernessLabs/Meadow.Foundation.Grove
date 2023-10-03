@@ -10,7 +10,7 @@ namespace Meadow.Foundation.Grove.Sensors.Environmental
             : base(analogInputPort, calibration)
         { }
 
-        public WaterSensor(IPin analogPin, Calibration calibration = null, TimeSpan? updateInterval = null) 
+        public WaterSensor(IPin analogPin, Calibration calibration = null, TimeSpan? updateInterval = null)
             : base(analogPin, calibration, updateInterval)
         { }
     }

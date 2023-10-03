@@ -23,7 +23,8 @@ namespace Grove.ThreeAxisDigitalAcceleromter1_5g_Sample
             sensor = new ThreeAxisDigitalAccelerometer1_5g(Device.CreateI2cBus());
 
             // classical .NET events can also be used:
-            sensor.Updated += (sender, result) => {
+            sensor.Updated += (sender, result) =>
+            {
                 Console.WriteLine($"Accel: [X:{result.New.X.MetersPerSecondSquared:N2}," +
                     $"Y:{result.New.Y.MetersPerSecondSquared:N2}," +
                     $"Z:{result.New.Z.MetersPerSecondSquared:N2} (m/s^2)]" +
@@ -35,7 +36,8 @@ namespace Grove.ThreeAxisDigitalAcceleromter1_5g_Sample
             var consumer = ThreeAxisDigitalAccelerometer1_5g.CreateObserver(
                 handler: result => Console.WriteLine($"Observer: [x] changed by threshold; new [x]: X:{result.New.X:N2}, old: X:{result.Old?.X:N2}"),
                 // only notify if there's a greater than 0.5G change in the Z direction
-                filter: result => {
+                filter: result =>
+                {
                     if (result.Old is { } old)
                     { //c# 8 pattern match syntax. checks for !null and assigns var.
                         return (result.New - old).Z > new Acceleration(0.5, AU.Gravity);

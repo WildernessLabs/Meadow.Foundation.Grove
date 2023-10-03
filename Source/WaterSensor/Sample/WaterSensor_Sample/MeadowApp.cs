@@ -24,7 +24,7 @@ namespace Grove.WaterSensor_Sample
                 null //e => { return Math.Abs(e.Delta) > 0.1f; }
             ));
 
-            waterSensor.Updated += (object sender, IChangeResult<float> e) => 
+            waterSensor.Updated += (object sender, IChangeResult<float> e) =>
             {
                 Console.WriteLine($"Level Changed, level: {e.New}cm");
             };
