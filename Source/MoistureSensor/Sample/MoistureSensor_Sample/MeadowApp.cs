@@ -32,7 +32,7 @@ namespace MoistureSensor_Sample
             sensor.Subscribe(consumer);
 
             // classical .NET events can also be used:
-            sensor.Updated += (sender, result) => 
+            sensor.Updated += (sender, result) =>
             {
                 Console.WriteLine($"Voltage Changed, new: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV");
             };
