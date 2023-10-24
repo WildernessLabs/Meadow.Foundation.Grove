@@ -17,13 +17,13 @@ VibrationSensor sensor;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     sensor = new VibrationSensor(Device.Pins.D13);
 
     sensor.VibrationDetected += (s, e) =>
     {
-        Console.WriteLine("Motion detected");
+        Resolver.Log.Info("Motion detected");
     };
 
     return Task.CompletedTask;

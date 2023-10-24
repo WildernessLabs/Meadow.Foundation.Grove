@@ -15,7 +15,7 @@ namespace Grove.VibrationMotor_Sample
 
         public override Task Initialize()
         {
-            Console.WriteLine("Initialize...");
+            Resolver.Log.Info("Initialize...");
 
             vibrationMotor = new VibrationMotor(Device.Pins.D13);
 
@@ -26,11 +26,11 @@ namespace Grove.VibrationMotor_Sample
         {
             for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine("Motor on");
+                Resolver.Log.Info("Motor on");
                 vibrationMotor.IsVibrating = true;
                 await Task.Delay(1000);
 
-                Console.WriteLine("Motor off");
+                Resolver.Log.Info("Motor off");
                 vibrationMotor.IsVibrating = false;
                 await Task.Delay(1000);
             }
