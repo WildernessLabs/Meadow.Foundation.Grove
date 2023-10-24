@@ -17,7 +17,7 @@ FourDigitDisplay display;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initializing ...");
+    Resolver.Log.Info("Initializing ...");
 
     display = new FourDigitDisplay(
         device: Device, 

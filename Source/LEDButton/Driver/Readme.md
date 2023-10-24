@@ -17,7 +17,7 @@ LEDButton ledButton;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     ledButton = new LEDButton(buttonPin: Device.Pins.D12, ledPin: Device.Pins.D13);
 
@@ -25,13 +25,13 @@ public override Task Initialize()
 
     ledButton.Clicked += (s, e) =>
     {
-        Console.WriteLine("Grove Button clicked");
+        Resolver.Log.Info("Grove Button clicked");
         ledButton.IsLedOn = !ledButton.IsLedOn;
     };
 
     ledButton.LongClicked += (s, e) =>
     {
-        Console.WriteLine("Grove Button long clicked");
+        Resolver.Log.Info("Grove Button long clicked");
     };
 
     return Task.CompletedTask;

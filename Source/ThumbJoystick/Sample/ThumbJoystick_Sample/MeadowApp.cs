@@ -17,7 +17,7 @@ namespace Grove.ThumbJoystick_Sample
 
         public override Task Initialize()
         {
-            Console.WriteLine("Initializing hardware...");
+            Resolver.Log.Info("Initializing hardware...");
 
             joystick = new ThumbJoystick(
                 Device.CreateAnalogInputPort(Device.Pins.A01, 1, TimeSpan.FromMilliseconds(10), new Voltage(3.3)),
@@ -38,8 +38,8 @@ namespace Grove.ThumbJoystick_Sample
 
         private void JoystickUpdated(object sender, IChangeResult<AnalogJoystickPosition> e)
         {
-            Console.WriteLine($"Horizontal: {e.New.Horizontal:n2}, Vertical: {e.New.Vertical:n2}");
-            Console.WriteLine($"Digital position: {joystick.DigitalPosition}");
+            Resolver.Log.Info($"Horizontal: {e.New.Horizontal:n2}, Vertical: {e.New.Vertical:n2}");
+            Resolver.Log.Info($"Digital position: {joystick.DigitalPosition}");
         }
 
         //<!=SNOP=>

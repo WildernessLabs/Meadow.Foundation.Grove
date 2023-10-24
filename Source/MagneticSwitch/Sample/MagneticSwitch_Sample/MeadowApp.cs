@@ -13,13 +13,13 @@ namespace Grove.FlameSensor_Sample
 
         public override Task Initialize()
         {
-            Console.WriteLine("Initialize...");
+            Resolver.Log.Info("Initialize...");
 
             var magneticSwitch = new MagneticSwitch(Device.Pins.D13);
 
             magneticSwitch.Changed += (s, e) =>
             {
-                Console.WriteLine($"Switched - open {magneticSwitch.IsOn}");
+                Resolver.Log.Info($"Switched - open {magneticSwitch.IsOn}");
             };
 
             return Task.CompletedTask;

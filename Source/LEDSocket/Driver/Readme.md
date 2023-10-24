@@ -17,7 +17,7 @@ LEDSocket led;
 
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     led = new LEDSocket(Device.Pins.D13);
 

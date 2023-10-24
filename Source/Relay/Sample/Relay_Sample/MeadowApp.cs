@@ -15,7 +15,7 @@ namespace Relay_Sample
 
         public override Task Initialize()
         {
-            Console.WriteLine("Initialize...");
+            Resolver.Log.Info("Initialize...");
 
             relay = new Relay(Device.Pins.D13);
 
@@ -30,7 +30,7 @@ namespace Relay_Sample
             {
                 state = !state;
 
-                Console.WriteLine($"- State: {state}");
+                Resolver.Log.Info($"- State: {state}");
                 relay.IsOn = state;
 
                 await Task.Delay(500);
