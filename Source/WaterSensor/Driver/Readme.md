@@ -26,7 +26,7 @@ public override Task Initialize()
         null //e => { return Math.Abs(e.Delta) > 0.1f; }
     ));
 
-    waterSensor.Updated += (object sender, IChangeResult<float> e) => 
+    waterSensor.Updated += (object sender, IChangeResult<float> e) =>
     {
         Resolver.Log.Info($"Level Changed, level: {e.New}cm");
     };

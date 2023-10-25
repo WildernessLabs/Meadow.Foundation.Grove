@@ -38,7 +38,7 @@ public override async Task Run()
         }
 
         await Task.Delay(2000);
-        
+
         for (int i = 180; i >= servo.Config.MinimumAngle.Degrees; i--)
         {
             await servo.RotateTo(new Angle(i, AU.Degrees));

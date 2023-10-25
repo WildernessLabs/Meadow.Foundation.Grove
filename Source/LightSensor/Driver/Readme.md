@@ -34,7 +34,7 @@ public override Task Initialize()
 
     sensor.Subscribe(consumer);
 
-    sensor.Updated += (sender, result) => 
+    sensor.Updated += (sender, result) =>
     {
         Resolver.Log.Info($"Voltage Changed, new: {result.New.Millivolts:N2}mV, old: {result.Old?.Millivolts:N2}mV");
     };

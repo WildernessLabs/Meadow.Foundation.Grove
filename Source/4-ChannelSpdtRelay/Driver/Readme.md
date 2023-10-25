@@ -1,8 +1,8 @@
-# Meadow.Foundation.Grove.Displays.4DigitDisplay
+# Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay
 
-**Grove GPIO 4 digit display**
+**Grove I2C 4-Channel SPDT Relay**
 
-The **4DigitDisplay** library is designed for the [Wilderness Labs](www.wildernesslabs.co) Meadow .NET IoT platform and is part of [Meadow.Foundation](https://developer.wildernesslabs.co/Meadow/Meadow.Foundation/).
+The **4ChannelSpdtRelay** library is designed for the [Wilderness Labs](www.wildernesslabs.co) Meadow .NET IoT platform and is part of [Meadow.Foundation](https://developer.wildernesslabs.co/Meadow/Meadow.Foundation/).
 
 The **Meadow.Foundation** peripherals library is an open-source repository of drivers and libraries that streamline and simplify adding hardware to your C# .NET Meadow IoT application.
 
@@ -13,31 +13,45 @@ To view all Wilderness Labs open-source projects, including samples, visit [gith
 ## Usage
 
 ```csharp
-FourDigitDisplay display;
+FourChannelSpdtRelay module;
 
 public override Task Initialize()
 {
     Resolver.Log.Info("Initializing ...");
 
-    display = new FourDigitDisplay(
-        device: Device, 
-        pinClock: Device.Pins.D02,
-        pinData: Device.Pins.D01) 
-    { 
-        Brightness = 7,
-        ScreenOn = true
-    };
+    module = new FourChannelSpdtRelay(Device.CreateI2cBus(), 0x11);
 
     return Task.CompletedTask;
 }
 
 public override Task Run()
 {
-    display.Clear();
+    for (int i = 0; i < 5; i++)
+    {
+        Resolver.Log.Info("All on");
+        module.SetAllOn();
 
-    var chars = new Character[] { Character.A, Character.B, Character.C, Character.D };
+        Thread.Sleep(1000);
 
-    display.Show(chars);
+        Resolver.Log.Info("All off");
+        module.SetAllOff();
+
+        Thread.Sleep(1000);
+
+        for (int j = 0; j < 4; j++)
+        {
+            Resolver.Log.Info($"{(RelayIndex)j} on");
+            module.Relays[j].IsOn = true;
+            Thread.Sleep(1000);
+        }
+
+        for (int j = 0; j < 4; j++)
+        {
+            Resolver.Log.Info($"{(RelayIndex)j} off");
+            module.Relays[j].IsOn = false;
+            Thread.Sleep(1000);
+        }
+    }
 
     return Task.CompletedTask;
 }
