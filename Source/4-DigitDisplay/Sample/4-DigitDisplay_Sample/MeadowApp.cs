@@ -2,7 +2,6 @@
 using Meadow.Devices;
 using Meadow.Foundation.Displays;
 using Meadow.Foundation.Grove.Displays;
-using System;
 using System.Threading.Tasks;
 
 namespace Grove.FourDigitDisplay_Sample
@@ -19,7 +18,6 @@ namespace Grove.FourDigitDisplay_Sample
             Resolver.Log.Info("Initializing ...");
 
             display = new FourDigitDisplay(
-                device: Device,
                 pinClock: Device.Pins.D02,
                 pinData: Device.Pins.D01)
             {
