@@ -23,6 +23,6 @@
   <ItemGroup>
     <None Include=".\Readme.md" Pack="true" PackagePath=""/>
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
-    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Servos.ServoCore\Driver\Servos.ServoCore.csproj" />
+    <PackageReference Include="Meadow.Foundation.Servos.ServoCore" Version="*" />
   </ItemGroup>
 </Project>
