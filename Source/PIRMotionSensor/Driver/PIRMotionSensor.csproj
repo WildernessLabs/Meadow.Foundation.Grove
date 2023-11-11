@@ -23,6 +23,6 @@
   <ItemGroup>
     <None Include=".\Readme.md" Pack="true" PackagePath=""/>
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
-    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Motion.ParallaxPir\Driver\Sensors.Motion.ParallaxPir.csproj" />
+    <PackageReference Include="Meadow.Foundation.Sensors.Motion.ParallaxPir" Version="1.4.0.3" />
   </ItemGroup>
 </Project>

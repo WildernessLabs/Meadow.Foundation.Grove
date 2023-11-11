@@ -23,6 +23,6 @@
   <ItemGroup>
     <None Include=".\Readme.md" Pack="true" PackagePath=""/>
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
-    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Displays.Tm1637\Driver\Displays.Tm1637.csproj" />
+    <PackageReference Include="Meadow.Foundation.Displays.Tm1637" Version="1.4.0.3" />
   </ItemGroup>
 </Project>
