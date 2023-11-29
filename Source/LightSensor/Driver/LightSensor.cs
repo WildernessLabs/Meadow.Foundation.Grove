@@ -21,13 +21,13 @@ namespace Meadow.Foundation.Grove.Sensors.Light
         /// Creates a new LightSensor driver
         /// </summary>
         public LightSensor(
-            IPin pin, 
-            int sampleCount = 5, 
-            TimeSpan? sampleInterval = null, 
+            IPin pin,
+            int sampleCount = 5,
+            TimeSpan? sampleInterval = null,
             Voltage? voltage = null)
-            : this (pin.CreateAnalogInputPort(
-                    sampleCount, 
-                    sampleInterval ?? TimeSpan.FromMilliseconds(40), 
+            : this(pin.CreateAnalogInputPort(
+                    sampleCount,
+                    sampleInterval ?? TimeSpan.FromMilliseconds(40),
                     voltage ?? new Voltage(3.3)))
         { }
     }

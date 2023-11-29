@@ -15,13 +15,13 @@ namespace Grove.FlameSensor_Sample
 
         public override Task Initialize()
         {
-            Console.WriteLine("Initialize...");
+            Resolver.Log.Info("Initialize...");
 
             flameSensor = new FlameSensor(Device.Pins.D13);
 
             flameSensor.FlameDetected += (s, e) =>
             {
-                Console.WriteLine($"fire detected: {e}");
+                Resolver.Log.Info($"fire detected: {e}");
             };
 
             return Task.CompletedTask;

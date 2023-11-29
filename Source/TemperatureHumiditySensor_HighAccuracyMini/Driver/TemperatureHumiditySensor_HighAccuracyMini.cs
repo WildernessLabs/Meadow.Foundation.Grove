@@ -12,7 +12,7 @@ namespace Meadow.Foundation.Grove.Sensors.Atmospheric
         /// Creates a TemperatureHumiditySensor_HighAccuracyMini driver
         /// </summary>
         /// <param name="i2cBus"></param>
-        public TemperatureHumiditySensor_HighAccuracyMini(II2cBus i2cBus) 
+        public TemperatureHumiditySensor_HighAccuracyMini(II2cBus i2cBus)
             : base(i2cBus, 64)
         { }
     }

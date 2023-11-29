@@ -19,7 +19,7 @@ namespace Meadow.Foundation.Grove.Relays
         /// Creates a new Relay driver
         /// </summary>
         /// <param name="pin"></param>
-        public Relay(IPin pin) 
+        public Relay(IPin pin)
             : base(pin)
         { }
     }

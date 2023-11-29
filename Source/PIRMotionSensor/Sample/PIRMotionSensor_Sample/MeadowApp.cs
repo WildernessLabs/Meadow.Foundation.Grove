@@ -24,12 +24,12 @@ namespace Grove.PIRMotionSensor_Sample
 
             motionSensor.OnMotionStart += (sender) =>
             {
-                Console.WriteLine($"Motion start  {DateTime.Now}");
+                Resolver.Log.Info($"Motion start  {DateTime.Now}");
             };
 
             motionSensor.OnMotionEnd += (sender) =>
             {
-                Console.WriteLine($"Motion end  {DateTime.Now}");
+                Resolver.Log.Info($"Motion end  {DateTime.Now}");
             };
 
             return Task.CompletedTask;
