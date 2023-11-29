@@ -1,8 +1,6 @@
 ﻿using Meadow.Foundation.Audio;
 using Meadow.Hardware;
 using Meadow.Units;
-using System;
-using System.Threading;
 
 namespace Meadow.Foundation.Grove.Audio
 {

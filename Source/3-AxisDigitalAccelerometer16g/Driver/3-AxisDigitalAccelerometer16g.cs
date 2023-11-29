@@ -13,7 +13,7 @@ namespace Meadow.Foundation.Grove.Sensors.Motion
         /// </summary>
         /// <param name="i2CBus"></param>
         public ThreeAxisDigitalAccelerometer16g(II2cBus i2CBus)
-            : base (i2CBus)
+            : base(i2CBus)
         { }
     }
 }

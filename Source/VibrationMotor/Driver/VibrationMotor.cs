@@ -12,7 +12,7 @@ namespace Meadow.Foundation.Grove.HID
         /// <summary>
         /// Gets/Sets vibration motor status
         /// </summary>
-        public bool IsVibrating 
+        public bool IsVibrating
         {
             get => isVibrating;
             set
@@ -36,7 +36,7 @@ namespace Meadow.Foundation.Grove.HID
         /// Creates a VibrationMotor driver
         /// </summary>
         /// <param name="pin"></param>
-        public VibrationMotor(IPin pin) 
+        public VibrationMotor(IPin pin)
             : this(pin.CreateDigitalOutputPort(false))
         { }
     }

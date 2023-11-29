@@ -15,13 +15,13 @@ To view all Wilderness Labs open-source projects, including samples, visit [gith
 ```csharp
 public override Task Initialize()
 {
-    Console.WriteLine("Initialize...");
+    Resolver.Log.Info("Initialize...");
 
     var lineFinder = new LineFinder(Device.Pins.D13);
 
     lineFinder.ColorChanged += (s, e) =>
     {
-        Console.WriteLine($"line color: {e}");
+        Resolver.Log.Info($"line color: {e}");
     };
 
     return Task.CompletedTask;

@@ -8,7 +8,7 @@ namespace Meadow.Foundation.Grove.Sensors.Light
     /// </summary>
     public class LineFinder
     {
-        IDigitalInputPort inputPort;
+        readonly IDigitalInputPort inputPort;
 
         /// <summary>
         /// Returns Line Color
