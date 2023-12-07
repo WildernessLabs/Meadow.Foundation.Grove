@@ -23,7 +23,7 @@
   <ItemGroup>
     <None Include=".\Readme.md" Pack="true" PackagePath=""/>
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
-    <PackageReference Include="Meadow.Foundation.Displays.Lcd.CharacterDisplay" Version="1.5.0" />
-    <PackageReference Include="Meadow.Foundation.Displays.Sh1106" Version="1.5.0" />
+    <PackageReference Include="Meadow.Foundation.Displays.Lcd.CharacterDisplay" Version="1.6.0" />
+    <PackageReference Include="Meadow.Foundation.Displays.Sh1106" Version="1.6.0" />
   </ItemGroup>
 </Project>
