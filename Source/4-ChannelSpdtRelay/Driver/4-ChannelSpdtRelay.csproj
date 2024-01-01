@@ -1,4 +1,4 @@
-﻿<Project Sdk="Meadow.Sdk/1.1.0">
+<Project Sdk="Meadow.Sdk/1.1.0">
   <PropertyGroup>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
     <Nullable>enable</Nullable>
@@ -15,7 +15,7 @@
     <PackageId>Meadow.Foundation.Grove.Relays.4ChannelSpdtRelay</PackageId>
     <RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation.Grove</RepositoryUrl>
     <PackageTags>Meadow.Foundation,Grove,relay,relays,spdt</PackageTags>
-    <Version>0.1.0</Version>
+    <Version>1.6.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Grove I2C 4-Channel SPDT Relay</Description>
     <PackageIcon>icon.png</PackageIcon>
