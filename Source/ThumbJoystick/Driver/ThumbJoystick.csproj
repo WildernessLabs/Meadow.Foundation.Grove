@@ -15,13 +15,13 @@
     <PackageId>Meadow.Foundation.Grove.Sensors.Hid.ThumbJoystick</PackageId>
     <RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation.Grove</RepositoryUrl>
     <PackageTags>Meadow.Foundation, Grove, Thumb, Analog, Joystick</PackageTags>
-    <Version>0.1.0</Version>
+    <Version>1.6.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Grove analog 2-axis ThumbJoystick</Description>
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <None Include=".\Readme.md" Pack="true" PackagePath=""/>
+    <None Include=".\Readme.md" Pack="true" PackagePath="" />
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
     <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Core\Meadow.Foundation.Core.csproj" />
   </ItemGroup>
