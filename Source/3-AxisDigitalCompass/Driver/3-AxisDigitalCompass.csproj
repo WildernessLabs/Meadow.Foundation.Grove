@@ -15,7 +15,7 @@
     <PackageId>Meadow.Foundation.Grove.Sensors.Motion.3-AxisDigitalCompass</PackageId>
     <RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation.Grove</RepositoryUrl>
     <PackageTags>Meadow.Foundation, Grove, Compass</PackageTags>
-    <Version>1.6.0.1</Version>
+    <Version>1.7.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Grove I2C 3-axis digital compass</Description>
     <PackageIcon>icon.png</PackageIcon>

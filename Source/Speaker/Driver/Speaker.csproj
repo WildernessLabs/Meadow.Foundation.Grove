@@ -15,7 +15,7 @@
     <PackageId>Meadow.Foundation.Grove.Audio.Speaker</PackageId>
     <RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation.Grove</RepositoryUrl>
     <PackageTags>Meadow.Foundation, Grove, Speaker</PackageTags>
-    <Version>1.6.0.1</Version>
+    <Version>1.7.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Grove PWM Speaker</Description>
     <PackageIcon>icon.png</PackageIcon>
