@@ -1,6 +1,7 @@
 ﻿using Meadow;
 using Meadow.Devices;
 using Meadow.Foundation.Grove.Relays;
+using Meadow.Peripherals.Relays;
 using System.Threading;
 using System.Threading.Tasks;
 using static Meadow.Foundation.Grove.Relays.FourChannelSpdtRelay;
@@ -39,15 +40,15 @@ namespace Grove.FourChannelSpdtRelay_Sample
 
                 for (int j = 0; j < 4; j++)
                 {
-                    Resolver.Log.Info($"{(RelayIndex)j} on");
-                    module.Relays[j].IsOn = true;
+                    Resolver.Log.Info($"{(RelayIndex)j} closed");
+                    module.Relays[j].State = RelayState.Closed;
                     Thread.Sleep(1000);
                 }
 
                 for (int j = 0; j < 4; j++)
                 {
-                    Resolver.Log.Info($"{(RelayIndex)j} off");
-                    module.Relays[j].IsOn = false;
+                    Resolver.Log.Info($"{(RelayIndex)j} open");
+                    module.Relays[j].State = RelayState.Closed;
                     Thread.Sleep(1000);
                 }
             }
