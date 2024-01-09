@@ -15,30 +15,34 @@ To view all Wilderness Labs open-source projects, including samples, visit [gith
 ```csharp
 Relay relay;
 
-public override Task Initialize()
-{
-    Resolver.Log.Info("Initialize...");
+        public override Task Initialize()
+        {
+            Resolver.Log.Info("Initialize...");
 
-    relay = new Relay(Device.Pins.D13);
+            relay = new Relay(Device.Pins.D13);
 
-    return Task.CompletedTask;
-}
+            return Task.CompletedTask;
+        }
 
-public override async Task Run()
-{
-    var state = false;
+        public override async Task Run()
+        {
+            var state = false;
 
-    while (true)
-    {
-        state = !state;
+            while (true)
+            {
+                state = !state;
 
-        Resolver.Log.Info($"- State: {state}");
-        relay.IsOn = state;
+                Resolver.Log.Info($"- State: {state}");
 
-        await Task.Delay(500);
-    }
-}
+                relay.State = state
+          ? Meadow.Peripherals.Relays.RelayState.Closed
+          : Meadow.Peripherals.Relays.RelayState.Open;
 
+                await Task.Delay(500);
+            }
+        }
+
+        
 ```
 ## How to Contribute
 
