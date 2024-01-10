@@ -15,14 +15,14 @@
     <PackageId>Meadow.Foundation.Grove.Sensors.Motion.MiniPIRMotionSensor</PackageId>
     <RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation.Grove</RepositoryUrl>
     <PackageTags>Meadow.Foundation, Grove, Parallax, PIR</PackageTags>
-    <Version>0.1.0</Version>
+    <Version>1.7.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Grove GPIO MiniPIRMotionSensor (Parallax PIR)</Description>
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <None Include=".\Readme.md" Pack="true" PackagePath=""/>
+    <None Include=".\Readme.md" Pack="true" PackagePath="" />
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
-    <PackageReference Include="Meadow.Foundation.Sensors.Motion.ParallaxPir" Version="1.6.0" />
+    <PackageReference Include="Meadow.Foundation.Sensors.Motion.ParallaxPir" Version="1.7.0" />
   </ItemGroup>
 </Project>
