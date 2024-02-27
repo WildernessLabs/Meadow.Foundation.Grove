@@ -2,7 +2,7 @@
 using Meadow.Devices;
 using Meadow.Foundation.Graphics;
 using Meadow.Foundation.Grove.Displays;
-using System;
+using Meadow.Peripherals.Displays;
 using System.Threading.Tasks;
 
 namespace Grove.OLEDDisplay1_12inch_Sample
