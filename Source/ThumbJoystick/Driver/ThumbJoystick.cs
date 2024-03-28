@@ -15,7 +15,7 @@ namespace Meadow.Foundation.Grove.Sensors.Hid
         /// <param name="horizontalPin"></param>
         /// <param name="verticalPin"></param>
         /// <param name="calibration">Calibration for the joystick.</param>
-        public ThumbJoystick(IPin horizontalPin, IPin verticalPin, JoystickCalibration calibration = null)
+        public ThumbJoystick(IPin horizontalPin, IPin verticalPin, JoystickCalibration? calibration = null)
             : base(horizontalPin, verticalPin, calibration)
         { }
 
@@ -32,7 +32,7 @@ namespace Meadow.Foundation.Grove.Sensors.Hid
         public ThumbJoystick(
             IPin horizontalPin,
             IPin verticalPin,
-            JoystickCalibration calibration,
+            JoystickCalibration? calibration,
             int sampleCount,
             TimeSpan sampleInterval)
             : base(horizontalPin,
@@ -51,7 +51,7 @@ namespace Meadow.Foundation.Grove.Sensors.Hid
         public ThumbJoystick(
             IAnalogInputPort horizontalInputPort,
             IAnalogInputPort verticalInputPort,
-            JoystickCalibration calibration = null)
+            JoystickCalibration? calibration = null)
             : base(
                   horizontalInputPort,
                   verticalInputPort,

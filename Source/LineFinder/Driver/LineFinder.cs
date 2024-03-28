@@ -13,7 +13,17 @@ namespace Meadow.Foundation.Grove.Sensors.Light
         /// <summary>
         /// Returns Line Color
         /// </summary>
-        public enum LineColor { White, Black }
+        public enum LineColor
+        {
+            /// <summary>
+            /// White lines
+            /// </summary>
+            White,
+            /// <summary>
+            /// Black lines
+            /// </summary>
+            Black
+        }
 
         /// <summary>
         /// Last state of the Line Finder
