@@ -21,8 +21,11 @@ namespace Meadow.Foundation.Grove.Sensors.Rotary
         /// Creates a new RotaryAngleSensor driver
         /// </summary>
         /// <param name="pin">AnalogChannel connected to the sensor.</param>
-        public RotaryAngleSensor(IPin pin, int sampleCount = 5, TimeSpan? sampleInterval = null, Voltage? voltage = null)
-            : this(pin.CreateAnalogInputPort(sampleCount, sampleInterval ?? TimeSpan.FromMilliseconds(40), voltage ?? new Voltage(3.3)))
+        /// <param name="sampleCount">The number of samples to take during each reading.</param>
+        /// <param name="sampleInterval">The interval between each sample.</param>
+        /// <param name="referenceVoltage">The reference voltage for the analog input port.</param>
+        public RotaryAngleSensor(IPin pin, int sampleCount = 5, TimeSpan? sampleInterval = null, Voltage? referenceVoltage = null)
+            : this(pin.CreateAnalogInputPort(sampleCount, sampleInterval ?? TimeSpan.FromMilliseconds(40), referenceVoltage ?? new Voltage(3.3)))
         { }
     }
 }
