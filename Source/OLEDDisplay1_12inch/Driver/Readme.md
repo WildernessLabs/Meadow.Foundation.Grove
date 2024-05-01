@@ -1,8 +1,8 @@
-# Meadow.Foundation.Grove.Displays.OLEDDisplay112
+# Meadow.Foundation.Grove.Displays.OLEDDisplay1_12inch
 
 **Grove I2C OLED 1.12" display**
 
-The **OLEDDisplay112** library is included in the **Meadow.Foundation.Grove.Displays.OLEDDisplay112** nuget package and is designed for the [Wilderness Labs](www.wildernesslabs.co) Meadow .NET IoT platform.
+The **OLEDDisplay1_12inch** library is included in the **Meadow.Foundation.Grove.Displays.OLEDDisplay1_12inch** nuget package and is designed for the [Wilderness Labs](www.wildernesslabs.co) Meadow .NET IoT platform.
 
 This driver is part of the [Meadow.Foundation](https://developer.wildernesslabs.co/Meadow/Meadow.Foundation/) peripherals library, an open-source repository of drivers and libraries that streamline and simplify adding hardware to your C# .NET Meadow IoT applications.
 
@@ -14,7 +14,7 @@ To view all Wilderness Labs open-source projects, including samples, visit [gith
 
 You can install the library from within Visual studio using the the NuGet Package Manager or from the command line using the .NET CLI:
 
-`dotnet add package Meadow.Foundation.Grove.Displays.OLEDDisplay112`
+`dotnet add package Meadow.Foundation.Grove.Displays.OLEDDisplay1_12inch`
 ## Usage
 
 ```csharp
