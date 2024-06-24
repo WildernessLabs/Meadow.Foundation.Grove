@@ -277,7 +277,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RTCs.Ds1307", "..\..\Meadow
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sensors.Motion.ParallaxPir", "..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Motion.ParallaxPir\Driver\Sensors.Motion.ParallaxPir.csproj", "{1706729E-3586-434C-B51D-CDB0ECCFC0BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meadow.F7", "..\..\Meadow.Core\source\implementations\f7\Meadow.F7\Meadow.F7.csproj", "{DD6C92AF-40B5-47C7-8EB7-02275C3B49F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meadow.F7", "..\..\Meadow.Core\Source\implementations\f7\Meadow.F7\Meadow.F7.csproj", "{DD6C92AF-40B5-47C7-8EB7-02275C3B49F4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sensors.Atmospheric.Th02", "..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Atmospheric.Th02\Driver\Sensors.Atmospheric.Th02.csproj", "{263E36E2-C856-485A-8125-0F3D014CC803}"
 EndProject
