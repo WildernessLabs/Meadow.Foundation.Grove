@@ -23,6 +23,6 @@
   <ItemGroup>
     <None Include=".\Readme.md" Pack="true" PackagePath="" />
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
-    <PackageReference Include="Meadow.Foundation.Sensors.Motion.Adxl3xx" Version="1.12.8" />
+    <PackageReference Include="Meadow.Foundation.Sensors.Motion.Adxl3xx" Version="2.0.1" />
   </ItemGroup>
 </Project>
