@@ -14,7 +14,7 @@ namespace Meadow.Foundation.Grove.Sensors.Rotary
         /// Creates a new RotaryAngleSensor driver
         /// </summary>
         /// <param name="port"></param>
-        public RotaryAngleSensor(IAnalogInputPort port) : base(port)
+        public RotaryAngleSensor(IObservableAnalogInputPort port) : base(port)
         { }
 
         /// <summary>

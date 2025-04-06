@@ -14,7 +14,7 @@ namespace Meadow.Foundation.Grove.Sensors.Light
         /// Creates a new LightSensor driver
         /// </summary>
         /// <param name="port"></param>
-        public LightSensor(IAnalogInputPort port) : base(port)
+        public LightSensor(IObservableAnalogInputPort port) : base(port)
         { }
 
         /// <summary>

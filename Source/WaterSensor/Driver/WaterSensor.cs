@@ -14,7 +14,7 @@ namespace Meadow.Foundation.Grove.Sensors.Environmental
         /// </summary>
         /// <param name="analogInputPort">The analog input port to read water level data from.</param>
         /// <param name="calibration">Optional calibration parameter for the sensor. If null, default calibration is used.</param>
-        public WaterSensor(IAnalogInputPort analogInputPort, Calibration? calibration = null)
+        public WaterSensor(IObservableAnalogInputPort analogInputPort, Calibration? calibration = null)
             : base(analogInputPort, calibration)
         { }
 

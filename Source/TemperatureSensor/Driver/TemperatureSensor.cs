@@ -25,7 +25,7 @@ namespace Meadow.Foundation.Grove.Sensors.Temperature
         /// Creates a new TemperatureSensor driver
         /// </summary>
         /// <param name="port">Analog port connected to the sensor</param>
-        public TemperatureSensor(IAnalogInputPort port) : base(port)
+        public TemperatureSensor(IObservableAnalogInputPort port) : base(port)
         { }
     }
 }

@@ -49,8 +49,8 @@ namespace Meadow.Foundation.Grove.Sensors.Hid
         /// <param name="verticalInputPort"></param>
         /// <param name="calibration"></param>
         public ThumbJoystick(
-            IAnalogInputPort horizontalInputPort,
-            IAnalogInputPort verticalInputPort,
+            IObservableAnalogInputPort horizontalInputPort,
+            IObservableAnalogInputPort verticalInputPort,
             JoystickCalibration? calibration = null)
             : base(
                   horizontalInputPort,

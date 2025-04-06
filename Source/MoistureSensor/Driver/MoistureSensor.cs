@@ -14,7 +14,7 @@ namespace Meadow.Foundation.Grove.Sensors.Moisture
         /// Creates a new MoistureSensor driver
         /// </summary>
         /// <param name="port">Analog port connected to the sensor.</param>
-        public MoistureSensor(IAnalogInputPort port)
+        public MoistureSensor(IObservableAnalogInputPort port)
             : base(port)
         { }
 

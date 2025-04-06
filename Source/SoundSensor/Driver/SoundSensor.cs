@@ -25,7 +25,7 @@ namespace Meadow.Foundation.Grove.Sensors.Sound
         /// Creates a new SoundSensor driver
         /// </summary>
         /// <param name="port">Analog port connected to the sensor</param>
-        public SoundSensor(IAnalogInputPort port) : base(port)
+        public SoundSensor(IObservableAnalogInputPort port) : base(port)
         { }
     }
 }
