@@ -1,0 +1,27 @@
+<Project Sdk="Meadow.Sdk/1.1.0">
+  <PropertyGroup>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <Nullable>enable</Nullable>
+    <LangVersion>12</LangVersion>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Authors>Wilderness Labs, Inc</Authors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <OutputType>Library</OutputType>
+    <AssemblyName>LoRa-E5</AssemblyName>
+    <Company>Wilderness Labs, Inc</Company>
+    <PackageProjectUrl>http://developer.wildernesslabs.co/Meadow/Meadow.Foundation/</PackageProjectUrl>
+    <PackageId>Meadow.Foundation.Grove.Transceivers.LoRa-E5</PackageId>
+    <RepositoryUrl>https://github.com/WildernessLabs/Meadow.Foundation.Grove</RepositoryUrl>
+    <PackageTags>Meadow.Foundation, Grove, LoRa, LoRaWAN, WioE5, Seeed, Transceiver</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Grove Lora-E5 LoRa transceiver module driver</Description>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".\Readme.md" Pack="true" PackagePath="" />
+    <None Include="..\..\icon.png" Pack="true" PackagePath="" />
+    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Transceivers.SeeedWioE5\Driver\Transceivers.SeeedWioE5.csproj" />
+  </ItemGroup>
+</Project>
