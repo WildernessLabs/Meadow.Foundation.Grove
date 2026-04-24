@@ -2,7 +2,7 @@
 
 **Grove Relay driver**
 
-The **Relay** library is included in the **Meadow.Foundation.Grove.Relays.Relay** nuget package and is designed for the [Wilderness Labs](www.wildernesslabs.co) Meadow .NET IoT platform.
+The **Relay** library is included in the **Meadow.Foundation.Grove.Relays.Relay** nuget package and is designed for the [Wilderness Labs](https://www.wildernesslabs.co) Meadow .NET IoT platform.
 
 This driver is part of the [Meadow.Foundation](https://developer.wildernesslabs.co/Meadow/Meadow.Foundation/) peripherals library, an open-source repository of drivers and libraries that streamline and simplify adding hardware to your C# .NET Meadow IoT applications.
 
@@ -12,7 +12,7 @@ To view all Wilderness Labs open-source projects, including samples, visit [gith
 
 ## Installation
 
-You can install the library from within Visual studio using the the NuGet Package Manager or from the command line using the .NET CLI:
+You can install the library from within Visual Studio using the NuGet Package Manager or from the command line using the .NET CLI:
 
 `dotnet add package Meadow.Foundation.Grove.Relays.Relay`
 ## Usage
@@ -20,34 +20,33 @@ You can install the library from within Visual studio using the the NuGet Packag
 ```csharp
 Relay relay;
 
-        public override Task Initialize()
-        {
-            Resolver.Log.Info("Initialize...");
+public override Task Initialize()
+{
+    Resolver.Log.Info("Initialize...");
 
-            relay = new Relay(Device.Pins.D13);
+    relay = new Relay(Device.Pins.D13);
 
-            return Task.CompletedTask;
-        }
+    return Task.CompletedTask;
+}
 
-        public override async Task Run()
-        {
-            var state = false;
+public override async Task Run()
+{
+    var state = false;
 
-            while (true)
-            {
-                state = !state;
+    while (true)
+    {
+        state = !state;
 
-                Resolver.Log.Info($"- State: {state}");
+        Resolver.Log.Info($"- State: {state}");
 
-                relay.State = state
-          ? Meadow.Peripherals.Relays.RelayState.Closed
-          : Meadow.Peripherals.Relays.RelayState.Open;
+        relay.State = state
+            ? Meadow.Peripherals.Relays.RelayState.Closed
+            : Meadow.Peripherals.Relays.RelayState.Open;
 
-                await Task.Delay(500);
-            }
-        }
+        await Task.Delay(500);
+    }
+}
 
-        
 ```
 ## How to Contribute
 
@@ -61,7 +60,7 @@ Relay relay;
 If you have questions or need assistance, please join the Wilderness Labs [community on Slack](http://slackinvite.wildernesslabs.co/).
 ## About Meadow
 
-Meadow is a complete, IoT platform with defense-grade security that runs full .NET applications on embeddable microcontrollers and Linux single-board computers including Raspberry Pi and NVIDIA Jetson.
+Meadow is a complete IoT platform with defense-grade security that runs full .NET applications on embeddable microcontrollers and Linux single-board computers including Raspberry Pi and NVIDIA Jetson.
 
 ### Build
 
@@ -73,6 +72,6 @@ Utilize native support for WiFi, Ethernet, and Cellular connectivity to send sen
 
 ### Deploy
 
-Instantly deploy and manage your fleet in the cloud for OtA, health-monitoring, logs, command + control, and enterprise backend integrations.
+Instantly deploy and manage your fleet in the cloud for OTA, health-monitoring, logs, command + control, and enterprise backend integrations.
 
 
